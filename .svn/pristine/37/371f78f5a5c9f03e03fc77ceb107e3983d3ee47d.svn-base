@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "支行列表",
+  "usingComponents": { 
+    "cmp-bank":"/components/bank/index"
+  }
+}

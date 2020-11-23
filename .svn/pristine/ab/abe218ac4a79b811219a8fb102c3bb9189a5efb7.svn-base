@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "留资详情",
+  "usingComponents": {
+    "cmp-basic-view":"/components/basciView/index"
+  }
+}

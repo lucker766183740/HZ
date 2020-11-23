@@ -1,0 +1,120 @@
+@import '/components/css/icon.wxss';
+
+.box{
+  padding-bottom:20rpx;
+}
+.bank-star{
+  /* position:relative; */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:690rpx;
+  height:220rpx;
+  margin:0 auto;
+  margin-bottom:30rpx;
+  padding-top:20rpx;
+}
+.bank-start-image{
+  width:360rpx;
+  height:240rpx;
+  border-radius: 20rpx;
+  box-shadow: 3rpx 5rpx 10rpx #ccc;
+  overflow: hidden;
+}
+.bank-start-image image{
+  width:100%;
+  height:100%;
+}
+.bank-desc-box{
+  width:330rpx;
+  height:180rpx;
+  padding-top:20rpx;
+  background-color:#fff;
+  border-radius: 0 20rpx 20rpx 0;
+  text-align: center;
+  box-shadow: 5rpx 5rpx 10rpx #ccc;
+}
+.bank-name{
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height:54rpx;
+}
+.bank-desc{
+  font-size: 23rpx;
+  line-height:44rpx;
+  color:#ccc;
+}
+.bank-go{
+  width:180rpx;
+  height:44rpx;
+  margin:0 auto;
+  margin-top:12rpx;
+  background-color:#ca2422;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  line-height:44rpx;
+  text-align: center;
+  color:#fff;
+}
+.bank-stage-address{
+  position:absolute;
+  top:50%;
+  right:20rpx;
+  width:300rpx;
+  height:100rpx;
+  margin-top:-30rpx;
+  font-size: 32rpx;
+  line-height:60rpx;
+  color:#bbb;
+}
+
+/********** 其他支行 **********/
+.bank-other{
+  display:flex;
+  justify-content: start;
+  align-items: center;
+  flex-flow: column;
+  margin-bottom:20rpx;
+  overflow: hidden;
+}
+.bank-other-item{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:650rpx;
+  height:152rpx;
+  margin-bottom: 20rpx;
+  padding:20rpx;
+  background-color:#fff;
+  border-radius: 12rpx;
+}
+.bank-other-item-image{
+  width:150rpx;
+  height:150rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+.bank-other-item-image image{
+  width:100%;
+  height:100%;
+}
+.bank-other-item-desc{
+  flex:1;
+  height:150rpx;
+  padding-left:20rpx;
+  font-size: 26rpx;
+  line-height:40rpx;
+  color:#aaa;
+}
+.bank-other-name{
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height:60rpx;
+  color:#323232;
+}
+.bank-other-content{
+  padding-left:36rpx;
+  background-position: 0 8rpx;
+}
+
+

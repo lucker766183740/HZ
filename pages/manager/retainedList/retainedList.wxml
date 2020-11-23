@@ -1,0 +1,9 @@
+<cmp-pick-month date="{{date}}" bindchildDateChange="triggerDateChange"/>
+
+<view wx:if="{{isShow}}">
+  <cmp-retained retainedList="{{retainedList}}"/>
+</view>
+
+<view wx:else class="tips">
+  数据为空，请让您的客户及时留资
+</view>

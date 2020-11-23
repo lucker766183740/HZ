@@ -1,0 +1,30 @@
+<view class="box">
+  <map 
+    id="mapp" 
+    style="width:100%;height:1200rpx;"
+    latitude="{{latitude}}" 
+    longitude="{{longitude}}" 
+    scale="16" 
+    show-compass="true"
+    show-scale="true" 
+    markers="{{markers}}"
+    polyline="{{polyline}}"
+  >	
+  </map>
+
+  <view class="btn-box">
+    <view class='obtain' bindtap='getAddressDetail'>
+      <image src="/images/icon/localtion.png"></image>
+    </view>
+
+    <button class="share" style="width:80rpx;" open-type="share">
+      <image src="/images/icon/share.png"></image>
+    </button>  
+  </view>
+
+<!-- <view>国家:{{nation}}</view>
+<view>省份：{{province}}</view>
+<view>城市：{{city}}</view>
+<view>区：{{district}}</view>
+<view>街道：{{street}}</view> -->
+</view>

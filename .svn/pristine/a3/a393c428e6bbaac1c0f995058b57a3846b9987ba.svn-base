@@ -1,0 +1,50 @@
+/********** 视频 **********/
+.news-video{
+  width: 690rpx;
+  height: 390rpx;
+  margin: 0rpx auto;
+  border: 1px solid #323232;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+.news-video video{
+  width:100%;
+  height:100%;
+}
+
+/* 图文 */
+.newimg{
+  margin-bottom:20rpx;
+  padding:0 20rpx;
+  background-color:#fff;
+}
+.newimg-image{
+  width:720rpx;
+  height:320rpx;
+  overflow: hidden;
+}
+.newimg-image image{
+  width:100%;
+  object-fit: cover;
+}
+
+/********** 讲话模块 **********/
+.news-speech{
+  height:200rpx;
+  padding:15rpx;
+  line-height: 48rpx;box-shadow: 0 5rpx 10rpx #ccc;
+  margin-bottom: 10rpx;  
+}
+.news-speech-header{
+  font-weight: bold;
+  font-size: 34rpx;
+}
+.news-speech-date{
+  font-size: 24rpx;
+  color:#999;
+}
+.news-speech-detail{
+  height:100rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}

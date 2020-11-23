@@ -1,0 +1,15 @@
+<view class="fabulous">
+  <view class="fabulous-person">
+    <view class="fabulous-person-browse">浏览人数 {{fabulous.topList.length}}</view>
+    <view class="fabulous-person-number">
+      <block wx:for="{{fabulous.topList}}" wx:key="index">
+        <image src="{{item.avatarUrl}}"></image>      
+      </block>
+    </view>
+    <view wx:if="{{ fabulous.topList.length > 6 }}" class="fabulous-person-ellipsis">...</view>
+  </view>
+  <view class="fabulous-action">
+    <view class="fabulous-action-giveme {{ fabulousAct ? 'fabulous-act' : 'fabulous-ori' }}" bindtap="fabulousActFn"></view>
+    <view class="fabulous-action-remark"> {{count}} </view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<view class="box">
+<!---------- 优秀支行 ---------->
+<block wx:if="{{bankStar.isShow}}">
+  <headline 
+    wx:if="{{bankStar.headlineShow}}" 
+    headline="{{bankStar.headline}}"
+  ></headline>
+  <block wx:for="{{_bankList}}" wx:key="index">
+    <view class="bank-star" bindtap="gotoNavigate" data-id="{{item.orgId}}" data-orgName="{{item.orgName}}">
+      <view class="bank-start-image">
+        <image src="{{item.imgPath}}"></image>
+      </view>
+      <view class="bank-desc-box">
+        <view class="bank-name">{{item.orgName}}</view>
+        <view class="bank-desc">{{item.commentsInfo}}</view>
+        <view class="bank-go">立即查看 ></view>
+      </view>
+    </view>  
+  </block>
+</block>
+<!---------- 其他支行(首页) ---------->
+<block wx:elif="{{bankOther.isShow}}">
+  <headline 
+    wx:if="{{bankOther.headlineShow}}" 
+    headline="{{bankOther.headline}}" 
+    headlineAll="{{bankOther.headlineAll}}" 
+    navigateUrl="{{bankOther.navigateUrl}}"
+  ></headline>
+  <view class="bank-other">
+    <block wx:for="{{_otherBankList}}" wx:key="index">
+      <view class="bank-other-item" bindtap="gotoNavigateItem" data-index="{{index}}" data-orgName="{{item.name}}">
+        <view class="bank-other-item-image">
+          <image src="{{item.path || '/images/home/bank-other.png'}}"></image>
+        </view>
+        <view class="bank-other-item-desc">
+          <view class="bank-other-name">{{item.name}}</view>
+          <view class="bank-other-content icon-bank-address">{{item.orgAddress}}</view>
+          <view class="bank-other-content icon-bank-person">{{item.headuserMobile}}</view>
+        </view>      
+      </view>
+    </block>
+  </view>
+</block>
+<!---------- 其他支行(支行页) ---------->
+<block wx:elif="{{bankOtherStage.isShow}}">
+  <block wx:for="{{bankOtherStage.list}}" wx:key="index">
+    <view class="bank-star" bindtap="gotoNavigate" data-id="{{item.orgId}}">
+      <view class="bank-name-box">
+        <view class="bank-name">{{item.name}}</view>
+        <!-- <view class="bank-go">GO ></view> -->
+      </view>
+      <view class="bank-desc">支行领导: {{item.headuserName}}</view>
+      <view class="bank-stage-address">
+        <view>公司地址: {{item.orgAddress}}</view>
+      </view>
+    </view>  
+  </block>
+</block>
+
+</view>
+

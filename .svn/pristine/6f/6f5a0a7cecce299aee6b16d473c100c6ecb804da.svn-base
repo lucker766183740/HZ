@@ -1,0 +1,18 @@
+<view class="business">
+  <!---------- 1.客户姓名 ---------->
+  <cmp-basic-view basicView="{{basicViewName}}" bindchildrenText="getChildrenName"/>
+  <!---------- 2.联系电话 ---------->
+  <cmp-basic-view basicView="{{basicViewPhone}}" bindchildrenText="getChildrenPhone"/>
+  <!---------- 3.身份证号 ---------->
+  <cmp-basic-view basicView="{{basicViewCard}}" bindchildrenText="getChildrenCard"/>
+  <!---------- 4.所在地区 ---------->
+  <cmp-basic-view basicView="{{basicViewRegion}}" bindchildrenRegion="getChildrenRegion"/>
+  <!---------- 5.详细地址 ---------->
+  <cmp-basic-view basicView="{{basicViewAddress}}" bindchildrenText="getChildrenAddress"/>
+  <!---------- 6.产品名称 ---------->
+  <cmp-basic-view basicView="{{basicViewProduct}}"/>
+  <!---------- 7.申请金额 ---------->
+  <!-- <cmp-basic-view basicView="{{basicViewMoney}}" bindchildrenText="getChildrenMoney"/> -->
+</view>
+<!---------- 按钮 ---------->
+<view class="business-btn" bindtap="bindSubmit">提交申请</view>

@@ -1,0 +1,4 @@
+<view class="container">
+  <view class="container-header">{{headerTitle}}</view>
+  <cmp-basic-view basicView="{{basicView}}"/>
+</view>

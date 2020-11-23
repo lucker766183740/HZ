@@ -1,0 +1,133 @@
+<!-------------------- 店铺版面类型-默认 -------------------->
+<!-- 0.领导讲话 / 1.轮播-广告 / 2.新闻模块 / 3.产品类目 / 4.产品推荐 / 5.明星经理 / 6.优秀支行 / 7.其他支行 -->
+<block wx:if="{{ templateType === 0 }}">
+  <!---------- 1.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" advertisingList="{{advertisingList}}"/>
+  <!---------- 2.其他活动 ---------->
+  <!-- <cmp-others imageTextList="{{imageTextList}}" videoList="{{videoList}}" /> -->
+  <cmp-others-imgText wx:if="{{imageTextSection.isShow}}" imageTextSection="{{imageTextSection}}" />
+  <!-- <cmp-others-media wx:if="{{videoSection.isShow}}" videoList="{{videoSection.videoList}}"/> -->
+
+  <!---------- 3.产品类目 ---------->
+  <cmp-category optView="{{category}}" />
+  
+  <!---------- 0.金融资讯 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+
+  <!---------- 4.产品推荐 ---------->
+  
+
+
+<!-- <view  class="prodetails-lowpak">
+  <view><cmp-recommend2 /></view>
+  <view><cmp-recommend2 /></view>
+  <view><cmp-recommend2 /></view>
+  <view><cmp-recommend2 /></view>
+    
+   
+</view>  -->
+
+  <cmp-recommend2 recommend="{{ware}}" />
+
+  <!-- <cmp-recommend recommend="{{ware}}" /> -->
+
+  <!---------- 5.明星经理 ---------->
+  <cmp-manager manager="{{manager}}" />
+
+  <!---------- 6.优秀支行 ---------->
+  <cmp-bank bankStar="{{bankStar}}" />
+
+  <!---------- 7.其他支行 ---------->
+  <cmp-bank bankOther="{{bankOther}}" />
+
+</block>
+
+<!-------------------- 店铺版面类型-1 -------------------->
+<!-- 0.领导讲话 / 1.轮播-广告 / 2.产品推荐 / 3.新闻模块 / 4.产品类目 / 5.优秀支行 / 6.明星经理 / 7.其他支行 -->
+<block wx:if="{{ templateType === 1 }}">
+  <!---------- 1.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" />
+
+  <!---------- 2.产品推荐 ---------->
+  <cmp-recommend recommend="{{ware}}" />
+
+  <!---------- 3.新闻模块 ---------->
+  <!-- <cmp-others imageTextList="{{imageTextList}}" videoList="{{videoList}}" /> -->
+  <cmp-others-imgText wx:if="{{imageTextSection.isShow}}" imageTextSection="{{imageTextSection}}" />
+  <!-- <cmp-others-media wx:if="{{videoSection.isShow}}" videoList="{{videoSection.videoList}}"/> -->
+
+  <!---------- 4.产品类目 ---------->
+  <cmp-category optView="{{category}}" />
+
+  <!---------- 0.领导讲话 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+
+  <!---------- 5.优秀支行 ---------->
+  <cmp-bank bankStar="{{bankStar}}" />
+
+  <!---------- 6.明星经理 ---------->
+  <cmp-manager manager="{{manager}}" />
+
+  <!---------- 7.其他支行 ---------->
+  <cmp-bank bankOther="{{bankOther}}" />
+</block>
+
+<!-------------------- 店铺版面类型-2 -------------------->
+<!-- 0.领导讲话 / 1.轮播-广告 / 2.优秀支行 / 3.明星经理 / 4.产品推荐 / 5.产品类目 / 6.新闻模块 / 7.其他支行 -->
+<block wx:if="{{ templateType === 2 }}">
+  <!---------- 1.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" />
+
+  <!---------- 2.优秀支行 ---------->
+  <cmp-bank bankStar="{{bankStar}}" />
+
+  <!---------- 3.明星经理 ---------->
+  <cmp-manager manager="{{manager}}" />
+
+  <!---------- 4.产品推荐 ---------->
+  <cmp-recommend recommend="{{ware}}" />
+
+  <!---------- 5.产品类目 ---------->
+  <cmp-category optView="{{category}}" />
+
+  <!---------- 0.领导讲话 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+
+  <!---------- 6.新闻模块 ---------->
+  <!-- <cmp-others imageTextList="{{imageTextList}}" videoList="{{videoList}}" /> -->
+  <cmp-others-imgText wx:if="{{imageTextSection.isShow}}" imageTextSection="{{imageTextSection}}" />
+  <!-- <cmp-others-media wx:if="{{videoSection.isShow}}" videoList="{{videoSection.videoList}}"/> -->
+
+  <!---------- 7.其他支行 ---------->
+  <cmp-bank bankOther="{{bankOther}}" />
+</block>
+
+<!-------------------- 店铺版面类型-3 -------------------->
+<!-- 0.领导讲话 / 1.产品推荐 / 2.轮播-广告 / 3.产品类目 / 4.新闻模块 / 5.明星经理 / 6.优秀支行 / 7.其他支行 -->
+<block wx:if="{{ templateType === 3 }}">
+  <!---------- 1.产品推荐 ---------->
+  <cmp-recommend recommend="{{ware}}" />
+
+  <!---------- 2.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" />
+
+  <!---------- 3.产品类目 ---------->
+  <cmp-category optView="{{category}}" />
+
+  <!---------- 0.领导讲话 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+
+  <!---------- 4.新闻模块 ---------->
+  <!-- <cmp-others imageTextList="{{imageTextList}}" videoList="{{videoList}}" /> -->
+  <cmp-others-imgText wx:if="{{imageTextSection.isShow}}" imageTextSection="{{imageTextSection}}" />
+  <!-- <cmp-others-media wx:if="{{videoSection.isShow}}" videoList="{{videoSection.videoList}}"/> -->
+
+  <!---------- 5.明星经理 ---------->
+  <cmp-manager manager="{{manager}}" />
+
+  <!---------- 6.优秀支行 ---------->
+  <cmp-bank bankStar="{{bankStar}}" />
+
+  <!---------- 7.其他支行 ---------->
+  <cmp-bank bankOther="{{bankOther}}" />
+</block>

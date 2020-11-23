@@ -1,0 +1,51 @@
+<!---------- 微信账号授权 ---------->
+<block wx:if="{{isAuthShow === 1}}">
+  <!-- <view class="auth-box background-auth"> -->
+  <view class="auth-top background-auth">
+    <image src="/images/icon/logo.png"></image>
+  </view>
+  <view class="auth-content">
+    <button style="width:670rpx;" class='auth-btn bth-success' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      <image src="/images/icon/auth-wechat.png"></image>
+      授权登录
+    </button>
+    <button style="width:670rpx;" class="auth-btn bth-fail" bindtap="bindNoAuth">不用了，谢谢</button>
+  </view>  
+  <!-- </view> -->
+</block>
+<!---------- 微信手机授权 ---------->
+<block wx:elif="{{isAuthShow === 2}}">
+  <view class="auth-top background-auth">
+    <view class="avatar">
+      <open-data type="userAvatarUrl"/>
+    </view>  
+    <view class="content">
+      您好，<open-data type="userNickName" />
+    </view>
+  </view>
+  <view class="auth-content">
+    <button style="width:670rpx;" class='auth-btn bth-success' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信手机授权</button> 
+    <button style="width:670rpx;" class="auth-btn bth-fail" bindtap="handleOtherMebile">其他手机注册</button>
+  </view>
+</block>
+<!---------- 其他手机注册 ---------->
+<block wx:elif="{{isAuthShow === 3}}">
+  <view class="auth-top background-auth">
+    <view class="avatar">
+      <open-data type="userAvatarUrl"/>
+    </view>  
+    <view class="content">
+      您好，<open-data type="userNickName" />
+    </view>
+  </view>
+  <view class="basic-section">
+    <view class="basic-input-title">联系方式</view>
+    <view class="basic-input-desc">
+      <input placeholder="请输入联系方式" bindinput="inputMobileNumber"></input>
+    </view>
+  </view>
+  <view class="auth-content">
+    <button style="width:670rpx;" class='auth-btn bth-success' bindtap="requestLogin">登录</button>
+    <button style="width:670rpx;" class="auth-btn bth-fail" bindtap="bindNoAuth">暂不注册</button>
+  </view>
+</block>

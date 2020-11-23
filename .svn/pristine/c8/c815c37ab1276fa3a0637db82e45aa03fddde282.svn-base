@@ -1,0 +1,149 @@
+@import '../css/icon.wxss';
+
+/********** 用户及经理展示 **********/
+.basic-section{
+  display:flex;
+  min-height:100rpx;
+  border-bottom:1px solid #eee;
+}
+.basic-section-title{
+  width:180rpx;
+  height:100rpx;
+  padding-left:30rpx;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  text-align:center;
+}
+.basic-section-desc{
+  flex:1;
+  /* min-height:100rpx; */
+  padding:26rpx 10rpx 26rpx 0;
+  line-height: 50rpx;
+  text-align: right;
+  color:#777;
+}
+.basic-section-arrow{
+  width:60rpx;
+  height:60rpx;
+  margin-top:30rpx;
+}
+
+/********** 输入框弹窗 **********/
+.box{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.basic-editbox{
+  position:absolute;
+  top:102rpx;
+  left:0;
+  align-items: center;
+  width:100%;
+  height:200rpx;
+  background-color:#fff;
+  box-shadow: 0 5rpx 8rpx #ccc;
+  z-index:1;
+}
+.basic-editbox .basic-section-desc{
+  height:70rpx;
+  padding-top:30rpx;
+  padding-right:30rpx;
+}
+.basic-editbox-btnbox{
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 5rpx 10rpx #ccc;
+}
+.basic-editbox-btn{
+  width:80rpx;
+  height:60rpx;
+  margin-right:20rpx;
+  padding:0 10rpx;
+  background-color:#3F89E8;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color:#fff;
+}
+.btn-cancel{
+  background-color:#ddd;
+  color:#000;
+}
+
+/********** 文本 **********/
+.basic-text .basic-section-desc{
+  padding-right:30rpx;
+}
+
+/********** 输入框 **********/
+.basic-input{
+  /* width:690rpx; */
+  margin:0 auto;
+}
+.basic-input-title{
+  position:relative;
+  width:240rpx;
+  height:100rpx;
+  padding-left:30rpx;
+  font-size: 32rpx;
+  line-height: 100rpx;
+}
+.basic-input-title-tigging{
+  position: absolute;
+  top:30rpx;
+  left:14rpx;
+  width: 16rpx;
+  height: 16rpx;
+  line-height: 26rpx;
+  
+  color:#DF0812;
+}
+.basic-input-desc{
+  flex:1;
+  height:70rpx;
+  padding-top:30rpx;
+  padding-right:30rpx;
+  text-align: right;
+  color:#777;
+}
+
+
+/********** 留资详情 **********/
+.basic-retained{
+  justify-content: center;
+  align-items: center;
+  background-color:#fff;
+}
+.basic-retained-title{
+  width:180rpx;
+  min-height:40rpx;
+  max-height: 84rpx;
+  padding:24rpx 20rpx;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color:#a9a9a9;
+  overflow: hidden;
+}
+.basic-retained-colon{
+  line-height: 100rpx;
+}
+.basic-retained-desc{
+  flex:1;
+  padding: 23rpx 0 10rpx 20rpx;
+  line-height: 56rpx;
+  color:#323232;
+}
+
+/********** 访问详情 **********/
+.basic-visit view{
+  flex:1;
+  line-height: 100rpx;
+  text-align: center;
+}
+.font-bold{
+  font-weight: bold;
+}

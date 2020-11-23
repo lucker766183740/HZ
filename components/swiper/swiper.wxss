@@ -1,0 +1,47 @@
+.swiper{
+  width:100%;
+  height:400rpx;
+}
+.swiper .swiper-item{
+  width:650rpx;
+  height:360rpx;
+  margin-top:-10rpx;
+}
+.swiper-image{
+  position: absolute;
+  width: 93%;
+  height: 340rpx; 
+  margin-top:5px; 
+  margin-left:11px;
+  border-radius: 8rpx;
+  overflow: hidden;
+  box-shadow: 5rpx 5rpx 8rpx #eee;
+  z-index: 1;
+  opacity: 0.7;
+  top: 5%;
+}
+.active{
+  width:100%;
+  height: 360rpx;
+  margin:0;
+  opacity: 1;
+  z-index: 2;
+  top: 5%;
+  transition:all 0s ease-in 0s;
+}
+/* swiper-导航 */
+.swiper .wx-swiper-dots{
+  width:100rpx;
+  margin-bottom:-10rpx;
+}
+.swiper .wx-swiper-dot{
+  width:15rpx;
+  display: inline-flex;
+  height: 10rpx;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+  justify-content:space-between;
+}
+.swiper .wx-swiper-dot-active{
+  width:36rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "客户留资",
+  "usingComponents": {
+    "cmp-pick-month":"/components/pick/pick-year-month/index",
+    "cmp-retained":"/components/retained/index"
+  }
+}

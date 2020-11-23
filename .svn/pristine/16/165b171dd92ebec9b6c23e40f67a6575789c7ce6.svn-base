@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "产品-详情",
+  "usingComponents": {  
+    "cmp-tabbar":"/components/tabbar/index"
+  }
+}

@@ -1,0 +1,44 @@
+page{
+  background-color:#fff;
+}
+.information-item{
+  display:flex;
+  width:670rpx;
+  height:212rpx;
+  margin:0 auto;
+  padding-left:20rpx;
+  background-color:#fff;
+  border-bottom:1px solid #eee;
+}
+.information-item-left{
+  flex:1;
+  margin-right:20rpx;
+  padding-top:26rpx;
+}
+.item-left-title{
+  max-height:100rpx;
+  margin-bottom:20rpx;
+  font-size: 32rpx;
+  line-height:48rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.item-left-date{
+  font-size: 26rpx;
+  line-height:40rpx;
+  color:#aaa;
+}
+.information-item-right{
+  width:240rpx;
+  height:180rpx;
+  margin-top:16rpx;
+  border:1px solid #ccc;
+}
+.information-item-right image{
+  width:100%;
+  height:100%;
+}

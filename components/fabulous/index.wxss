@@ -1,0 +1,65 @@
+@import "../css/icon.wxss";
+.fabulous{
+  display:flex;
+  align-items: center;
+  width:690rpx;
+  height:160rpx;
+  margin:0 auto;
+  margin-bottom:10rpx;
+  padding:15rpx;
+  background-color:#fff;
+  border:1px solid #eee;
+  border-radius: 12rpx;
+  box-shadow: 0 5rpx 10rpx #ccc;
+}
+.fabulous-person{
+  position:relative;
+  width:540rpx;
+  height:160rpx;
+  margin-right:20rpx;
+}
+.fabulous-person-number{
+  height:80rpx;
+  padding-top:24rpx;
+  padding-left:10rpx;
+  overflow: hidden;
+}
+.fabulous-person-number image{
+  float:left;
+  width:64rpx;
+  height:64rpx;
+  margin-right:16rpx;
+  margin-bottom:50rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.fabulous-person-browse{
+  font-size: 28rpx;
+  line-height:40rpx;
+  text-indent: 20rpx;
+  color:#a9a9a9;
+}
+.fabulous-person-ellipsis{
+  position:absolute;
+  top: 64rpx;
+  right: 10rpx;
+  font-size: 32rpx;
+  line-height: 40rpx;
+}
+
+.fabulous-action{
+  width:100rpx;
+  height:160rpx;
+}
+.fabulous-action-giveme{
+  height:100rpx;
+  background-position:34rpx 40rpx;
+  background-size:40rpx;
+}
+.fabulous-action-remark{
+  margin-top:-16rpx;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color:#a9a9a9;
+}

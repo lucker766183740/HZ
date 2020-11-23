@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "农商e站",
+  "usingComponents": {
+    "cmp-swiper":"/components/swiper/swiper",
+    "cmp-category":"/components/category/index",    
+    "cmp-recommend":"/components/recommend/index",
+    "cmp-manager":"/components/manager/index",    
+    "cmp-bank":"/components/bank/index",    
+    "cmp-others-imgText":"/components/others/imgText/index",
+    "cmp-others-media":"/components/others/media/index",
+    "cmp-others-speech":"/components/others/speech/index"
+  }
+}

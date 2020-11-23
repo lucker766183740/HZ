@@ -1,0 +1,32 @@
+.contaiors{
+  width:100%;
+}
+.basic-box{
+  width:690rpx;
+  margin:0 auto;
+  margin-bottom:20rpx;
+  padding:15rpx;
+  border-bottom:1px solid #eee;
+}
+.basic-view{
+  display:flex;
+  margin-bottom:16rpx;
+}
+.basic-view:nth-last-of-type(1){
+  margin-bottom:6rpx;
+}
+.basic-view-title{
+  width:160rpx;
+  height:50rpx;
+  padding-left:20rpx;
+  border-right:2px solid #eee;
+  font-weight: bold;
+  line-height:50rpx;
+  text-align: center;
+}
+.basic-view-desc{
+  flex:1;
+  line-height:50rpx;
+  padding-left:20rpx;
+  color:#777;
+}

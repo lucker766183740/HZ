@@ -1,0 +1,2 @@
+<cmp-pick-month date="{{date}}" bindchildDateChange="triggerDateChange" />
+<cmp-tabs tabsData="{{visitList}}"/>

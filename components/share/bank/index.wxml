@@ -1,0 +1,9 @@
+<view class="box" hidden="{{!canvasHidden}}" catchtap="handleCloseTips"> 
+  <view class="canvas-box" catchtap="handleNothing"> 
+    <canvas canvas-id='share' class="canvas-section" style='width:640rpx;height:970rpx;'></canvas> 
+  </view>
+  <!-- 按钮 -->
+  <view class="canvas-btn-box">
+    <view class="canvas-btn btn-sure" catchtap="handerSaveShareToPhone"><image src="/images/icon/mood.png"></image>  保存</view>
+  </view>
+</view>

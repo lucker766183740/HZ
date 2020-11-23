@@ -1,0 +1,75 @@
+<!--pages/home/details/details.wxml-->
+<view class="cantinas">
+<!-- 详情页大图片 -->
+  <view class="cantinas-laimg">
+    <image src="{{detail.coverPath || '../../../images/bank/manager-back.png'}}"></image>
+  </view>
+  <!-- 标题，以及详情 -->
+  <view class="cantinas-details">
+  <view>
+    <!-- 标题 -->
+      <view class="cantinas-title">{{detail.productName}}</view>
+      <!-- 详细内容 -->
+      <!-------------------- 贷款模块 -------------------->
+      <block wx:if="{{detail.productTypeId === 3}}">
+        <view> {{detail.loanUse}}</view>
+      </block>
+
+      <!-------------------- 存款模块 -------------------->
+      <block wx:if="{{detail.productTypeId === 2}}">
+        <view> {{detail.productIntroduction}}</view>
+      </block>
+
+      <!-------------------- 资产推介模块 -------------------->
+      <block wx:if="{{detail.productTypeId === 1}}">
+        <view>{{detail.tradingRule}}</view>
+      </block>
+      <!-- 小标签 -->
+      <view>
+        <view class="cantinas-paks">{{detail.productKeyword}}</view>
+      </view>
+    </view>
+    <!-- 访问icon小图标 -->
+    <view class="cantinas-icon">
+      <image src="../../../images/icon/lock-cm.png"></image>
+      <!-- 访问量 -->
+      <view>{{detail.clickCount || '0'}}</view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view  class="cantinas-neiron">
+    <view>内容</view>
+  </view>
+
+    <!-- 详细信息 -->
+  <!-- <view class="cantinas-xwna">
+    <view>“家庭亲情带”是指银行项借款人发放的有其家庭成员作为担保人，用于生产静音消费等用途的的贷款。</view>
+    <view class="cantinas-xnna">适合人群：个人</view>
+    <view>年龄要求：18-65岁</view>
+    <view>主要用途：生产经营，消费</view>
+    <view>贷款额度：生产经营最高不超过50万元，宁村剧名不超过20万元，城市剧名不超过20万元，城镇居民不唱过30万元</view>
+    <view>贷款期限：不超过2年</view>
+    <view>担保方式：家庭成员担保</view>
+  </view> -->
+  <view class="cantinas-lowimg">
+    <block wx:for="{{imageList}}" wx:key="index">
+    <image src="{{item || '../../../images/bank/manager-back.png'}}"></image>
+    </block>
+  </view>
+
+
+<!---------- 办理按钮 ---------->
+<view class="btnsection">
+  <view class="btnsection-contart" bindtap="handMessage">
+    <image src="/images/icon/icon-call.png"></image> 
+    联系我们
+  </view>
+  <view class="btnsection-border"></view>
+  <view class="btnsection-share">
+    <button style="width:220rpx;" open-type="share">
+      <image src="/images/icon/icon-share.png"></image>分享
+    </button>
+  </view>
+  <view class="btnsection-handle" bindtap="gotoBusiness"><image src="/images/icon/icon-handle.png"></image> 我要办理</view>
+</view>
+</view>

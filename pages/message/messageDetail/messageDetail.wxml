@@ -1,0 +1,59 @@
+<!---------- 顶部指示框 ---------->
+<view hidden="{{ productHidden }}" class="popup">
+  <view class="popup-image">
+    <image src="{{imgSrc}}"></image>
+  </view>
+  <view class="popup-introduce">
+    <view class="popup-introduce-desc">{{productName}}</view>
+    <view class="popup-introduce-send">
+      <view bindtap="handSendProduct">发给客户经理</view>  
+    </view>
+  </view>
+</view>
+
+<view class="box">
+
+<block wx:for="{{messageList}}" wx:key="index">
+<!---------- 客户经理 ---------->
+  <block wx:if="{{item.personType === 'to'}}">
+    <view class="msg marager">
+      <view class="msg-portrait">
+        <image src="{{item.headerImg}}"></image>
+      </view>
+      <view class="msg-desc">{{item.message}}</view>
+    </view>  
+  </block>
+<!---------- 用户 ---------->
+  <block wx:elif="{{ item.personType === 'from'}}">
+    <view class="msg customer">
+      <!------ 文本信息 ------>
+      <block wx:if="{{item.message}}">
+        <view class="msg-desc">{{item.message}}</view>      
+      </block>
+      <!------ 产品信息 ------>
+      <block wx:elif="{{item.imageSrc}}">
+        <view class="msg-product" bindtap="gotoProductDetail" data-id="{{item.productId}}">
+          <view class="msg-product-image">
+            <image src="{{item.imgSrc}}"></image>
+          </view>
+          <view class="msg-product-desc">{{item.productName}}</view>
+        </view>
+      </block>
+      <!------ 头像 ------>
+      <view class="msg-portrait">
+        <image src="{{item.headerImg}}"></image>
+      </view>
+    </view>  
+  </block>
+</block>
+
+</view>
+
+
+<!---------- 输入框 ---------->
+<view class="dialog">
+  <view class="dialog-input">
+    <textarea auto-height="true" bindinput="inputInputTetx" value="{{text}}"></textarea>
+  </view>
+  <view class="dialog-send" bindtap="handSendMessage">发送</view>
+</view>

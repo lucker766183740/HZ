@@ -1,0 +1,87 @@
+/* 总的容器 */
+.banganner{
+  width: 350rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+/* 图片容器的属性 */
+.bankge{
+  width: 350rpx;
+  height: 180rpx;
+  position: relative;
+  border-top-right-radius: 16rpx;
+}
+/* 大图 */
+.bankge>image{
+  width: 350rpx;
+  height: 180rpx;
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+}
+/* 左上角推荐 */
+.bankge>text{
+  font-size: 22rpx;
+  background-color: #DF0813;
+  padding: 5rpx 10rpx;
+  position: absolute;
+  color:#fff;
+ border-bottom-right-radius: 10rpx;
+}
+/* 图片下的大框 */
+.bangnner-details{
+  width: 350rpx;
+  height: 230rpx;
+  border-bottom-left-radius: 16rpx;
+  border-bottom-right-radius: 16rpx;
+  position: relative;
+  background: #fff;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+/* 小图标icon */
+.bankge2>image{
+position: absolute;
+right: 76rpx;
+top: 30rpx;
+width: 42rpx;
+height: 42rpx;
+} 
+/* 浏览量 */
+.bankge2>view{
+  position: absolute;
+  right: 45rpx;
+  top: 35rpx;
+}
+/* 标题，详情，贷款额度共有属性 */
+.banke-lowtitle,.bankge2-lowkuan,.bankge-title{
+margin: 10rpx 15rpx;
+}
+/* 标题 */
+.bankge-title{
+  font-weight: 800;
+  padding-top:20rpx ;
+}
+/* 详情 */
+.banke-lowtitle{
+ color:#666;
+}
+/* 贷款额度 */
+.bankge2-lowkuan{
+  display: inline-block;
+  text-align: center;
+  color: #aaa;
+  background: #eee;
+  padding: 5rpx 10rpx;
+  border-radius: 30px;
+}
+.prodetails-lowpak{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+ .prodetails-lowpak>view:nth-child(even){
+  margin-left: 17rpx;
+}
+.prodetails-lowpak>view:nth-child(odd){
+margin-left: 17rpx;
+}

@@ -1,0 +1,18 @@
+.selectDate{
+  display:flex;
+  height: 80rpx;
+  margin-bottom:12rpx;
+  padding:8rpx 10rpx;
+  border-bottom: 1px solid #ccc;
+  font-size: 36rpx;
+  line-height: 80rpx;
+  text-align: center;box-shadow: 0 5rpx 10rpx #ccc;
+
+}
+.selectDate view{
+  flex:1;
+  background-color:#DF0712;
+  border:1px solid #fff;
+  border-radius: 8rpx;
+  color:#fff;
+}

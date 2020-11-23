@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- <cmp-recommend  recommend="{{ware}}"/> -->
+  <block wx:if="{{recordList.length}}">
+    <block wx:for="{{recordList}}" wx:key="index">
+      <!-- <view class="wares {{ type != 1 ? 'wares-history' : ''}}" bindtap="gotoProductDetail" data-index="{{index}}">
+        <view class="wares-top"> 
+          <view class="wares-top-title">{{item.productName}}</view>
+          <view class="wares-top-date">{{item.viewDate}}</view> -->
+          <!-- <view class="wares-top-sign">{{item.productKeyword}}</view> -->
+          <!-- <view class="wares-top-right">         -->
+            <!-- <view wx:if="{{item.rate}}" class="wares-top-rate">{{item.qiriAnnualized}}%</view>
+            <view class="wares-top-rate-tips">参考年化收益率</view> -->
+          <!-- </view> -->
+        <!-- </view>
+      </view> -->
+      <view class="wares" bindtap="gotoProductDetail" data-index="{{index}}">
+        <view class="wares-top"> 
+          <view class="wares-top-title">{{item.productName}}</view>
+          <view hidden="{{!item.viewDate}}" class="wares-top-sign">{{item.viewDate}}</view>
+        </view>
+        <view class="wares-bottom">
+          <view class="wares-bottom-item">        
+            <view class="wares-rate">+{{item.qiriAnnualized || 2}}%</view>
+            <view class="wares-rate-tips">参考年化收益率</view>
+          </view>
+          <view class="ware-bottom-division"></view>
+          <view class="wares-bottom-item">
+            <view class="wares-rate">{{item.minimumAmount/10000 || 10}}万元 <text class="wares-bottom-smallsize"> 起</text></view>
+            <view class="wares-rate-tips">{{item.loanTimeLimit || ''}}</view>          
+          </view>
+        </view>
+      </view>
+    </block>  
+  </block>
+  <block wx:else>
+    <view class="recommend-tips">暂未获取数据，请查看其他类型</view>
+  </block>
+</view>

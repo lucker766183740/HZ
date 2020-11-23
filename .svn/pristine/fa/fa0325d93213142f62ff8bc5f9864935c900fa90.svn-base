@@ -1,0 +1,22 @@
+<view style="height:350rpx;"></view>
+<view class="avatar">
+  <open-data type="userAvatarUrl"/>
+</view>
+<view class="content">
+  <open-data type="userNickName" />
+</view>
+
+<block wx:if="{{isShow}}">
+  <button class='login-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</block>
+
+<view wx:else>
+  <!-- <button class='login-btn' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机授权</button> -->
+  <view class="basic-section">
+    <view class="basic-input-title">联系方式</view>
+    <view class="basic-input-desc">
+      <input placeholder="请输入联系方式" bindinput="inputBasicViewText"></input>
+    </view>
+  </view>
+  <button class='login-btn' bindtap="requestLogin">登录</button>
+</view>

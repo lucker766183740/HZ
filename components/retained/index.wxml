@@ -1,0 +1,27 @@
+<view class="contaiors">
+  <block wx:for="{{retainedList}}" wx:key="index">
+    <!-- <view class="basic-box" bindtap="gotoRetainedDetail" data-index="{{index}}"> -->
+    <view class="basic-box">
+      <view class="basic-view"> 
+        <view class="basic-view-title">客户姓名</view>
+        <view class="basic-view-desc">{{item.customer}}</view>
+      </view>
+      <view class="basic-view"> 
+        <view class="basic-view-title">购买产品</view>
+        <view class="basic-view-desc">{{item.product}}</view>
+      </view>
+      <view class="basic-view"> 
+        <view class="basic-view-title">购买时间</view>
+        <view class="basic-view-desc">{{item.date}}</view>
+      </view>
+      <view class="basic-view"> 
+        <view class="basic-view-title">购买金额</view>
+        <view class="basic-view-desc">{{item.money}}元</view>
+      </view>
+      <!-- <view class="basic-view"> 
+        <view class="basic-view-title">客户经理</view>
+        <view class="basic-view-desc">{{item.manager}}</view>
+      </view> -->
+    </view>  
+  </block>
+</view>

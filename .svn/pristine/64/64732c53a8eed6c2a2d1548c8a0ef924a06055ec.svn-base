@@ -1,0 +1,98 @@
+<!---------- 用户及经理展示 ---------->
+<block wx:if="{{basicView.type === 'person'}}">
+  <view class="box">
+    <block wx:for="{{personList}}" wx:key="index">
+      <view class="basic-section" bindtap="showEditBox" data-index="{{index}}">
+        <view class="basic-section-title">{{item.title}}</view>
+        <view class="basic-section-desc">{{item.desc}}</view>
+        <view class="basic-section-arrow {{ item.sure ? 'arrow-right' : ''}}"></view>
+      </view>
+    </block>
+    <!----- 输入框弹窗 ----->
+      <view class="basic-editbox" style="display:{{ editTextBoxShow ? 'block' : 'none' }}; top:{{ editBoxTop }}rpx">
+        <!------ 上层输入框 ------>
+        <view class="basic-section">
+          <view class="basic-section-desc">
+            <input 
+              placeholder="{{editBoxPlaceholder}}" 
+              placeholder-style="color:red" 
+              bindinput="inputEditBoxShowText" 
+              value="{{editBoxVal}}"
+            ></input>
+          </view>
+        </view>
+        <!------ 下层按钮 ------>
+        <view class="basic-section basic-editbox-btnbox">            
+          <view class="basic-editbox-btn btn-cancel" bindtap="hideEditBox">取消</view>
+          <view class="basic-editbox-btn" bindtap="referToPagesPerson">确定</view>  
+        </view>
+      </view>
+  </view>
+</block>
+
+<!---------- 文本 ---------->
+<block wx:if="{{basicView.type === 'text'}}">  
+  <view class="basic-section basic-text">
+    <view class="basic-section-title">{{basicView.title}}</view>
+    <view class="basic-section-desc">{{basicView.desc}}</view>
+  </view>
+</block>
+
+<!---------- 输入框 ---------->
+<block wx:if="{{basicView.type === 'input'}}">
+  <view class="basic-section basic-input">
+    <view class="basic-input-title">
+      <view wx:if="{{basicView.tagging}}" class="basic-input-title-tigging">*</view>
+      {{basicView.title}}
+    </view>
+    <view class="basic-input-desc">
+      <input 
+        placeholder="{{basicView.placeholder}}" 
+        placeholder-style="color:{{ basicView.holderStyle ? 'red' : '#777' }}" 
+        bindinput="inputBasicViewText" 
+        bindblur="blurBasicViewText"
+        value="{{val}}"
+      ></input>
+    </view>
+  </view>
+</block>
+
+<!---------- 地区下拉框 ---------->
+<block wx:if="{{basicView.type === 'city'}}">
+  <picker mode="region" bindchange="bindRegionChange" value="{{cityData}}" custom-item="{{customItem}}">
+    <view class="basic-section basic-input">
+      <view class="basic-input-title">{{basicView.title}}</view>
+      <block wx:if="{{region.length === 0}}">
+        <view class="basic-input-desc">请选择所在地区</view>      
+      </block>
+      <block wx:else>
+        <view class="basic-input-desc">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>      
+      </block>
+    </view>
+  </picker>
+</block>
+
+<!---------- 留资详情 ---------->
+<block wx:if="{{basicView.type === 'retained'}}">
+  <block wx:for="{{basicView.list}}" wx:key="index">
+    <view class="basic-section basic-retained" bindtap="gotoVisitDetail" data-index="{{index}}">
+      <view class="basic-retained-title">{{item.title}} :</view>
+      <!-- <view class="basic-retained-colon"></view> -->
+      <view class="basic-retained-desc">{{item.desc}}</view>
+    </view>
+  </block>
+</block>
+
+<!---------- 访问详情 ---------->
+<block wx:if="{{basicView.type === 'visit'}}">
+    <view class="basic-section basic-visit">
+      <view class="basic-visit-title font-bold">访问时间</view>
+      <view class="basic-visit-desc font-bold">访问人数</view>    
+    </view>
+  <block wx:for="{{basicView.list}}" wx:key="index">
+    <view class="basic-section" bindtap="gotoVisitDetail" data-index="{{index}}">
+      <view class="basic-visit-title font-bold">{{item.date}}</view>
+      <view class="basic-visit-desc">{{item.number}}</view>
+    </view>
+  </block>
+</block>

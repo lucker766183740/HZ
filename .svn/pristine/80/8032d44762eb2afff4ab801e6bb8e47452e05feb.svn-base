@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "人员访问",
+  "usingComponents": {    
+    "cmp-basic-view":"/components/basciView/index"
+  }
+}

@@ -1,0 +1,5 @@
+<view class="headline">
+  <view class="headline-border icon-headline-circle"></view>
+  <text class="headline-title">{{headline}}</text> 
+  <view wx:if="{{headlineAll}}" class="headline-all" bindtap="gotoNavigate">查看全部</view>
+</view>

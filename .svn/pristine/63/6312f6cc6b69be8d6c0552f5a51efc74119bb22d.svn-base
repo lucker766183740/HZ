@@ -1,0 +1,65 @@
+<headline 
+  wx:if="{{recommend.headlineShow}}" 
+  headline="{{recommend.headline}}" 
+  headlineAll="{{recommend.headlineAll}}" 
+  navigateUrl="{{recommend.navigateUrl}}"
+></headline>
+
+<view class="recommend">
+  <block wx:if="{{recommend.wareList.length}}">
+    <block wx:for="{{recommend.wareList}}" wx:key="index">
+      <view class="wares" bindtap="gotoProductDetail" data-index="{{index}}">
+        <view class="wares-top"> 
+          <view class="wares-top-title">{{item.productName}}</view>
+          <view class="wares-top-sign">{{item.productKeyword}}</view>
+        </view>
+
+        <block wx:if="{{item.productTypeId==1}}">
+        <view class="wares-bottom">
+          <view class="wares-bottom-item">        
+            <view class="wares-rate">{{item.riskLev || ''}}</view>
+            <view class="wares-rate-tips">联系人</view>
+          </view>
+          <view class="ware-bottom-division"></view>
+          <view class="wares-bottom-item">
+            <view class="wares-rate">{{item.investmentHorizon}} <text class="wares-bottom-smallsize"> </text></view>
+            <view class="wares-rate-tips">联系电话</view>          
+          </view>
+        </view>
+        </block>
+
+         <block wx:if="{{item.productTypeId==2}}">
+        <view class="wares-bottom">
+          <view class="wares-bottom-item">        
+            <view class="wares-rate">{{item.minimumAmount || ''}}</view>
+            <view class="wares-rate-tips">起存金额</view>
+          </view>
+          <view class="ware-bottom-division"></view>
+          <view class="wares-bottom-item">
+            <view class="wares-rate">{{item.depositTerm}} <text class="wares-bottom-smallsize"> </text></view>
+            <view class="wares-rate-tips">存期</view>          
+          </view>
+        </view>
+        </block>
+
+  <block wx:if="{{item.productTypeId==3}}">
+        <view class="wares-bottom">
+          <view class="wares-bottom-item">        
+            <view class="wares-rate-dk">{{item.loanAmount || ''}}</view>
+            <view class="wares-rate-tips">贷款额度</view>
+          </view>
+          <view class="ware-bottom-division"></view>
+          <view class="wares-bottom-item">
+            <view class="wares-rate-dk">{{item.loanTimeLimit}} <text class="wares-bottom-smallsize"> </text></view>
+            <view class="wares-rate-tips">贷款期限</view>          
+          </view>
+        </view>
+        </block>
+      </view>
+    </block>
+  </block>
+  <!-- <view>asdasdsads</view>  -->
+  <!-- <block wx:else>
+    <view class="recommend-tips">暂未获取数据，请查看其他类型</view>
+  </block> -->
+</view>

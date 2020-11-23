@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "关注的经理",
+  "usingComponents": {
+    "cmp-manager":"/components/manager/index"
+  }
+}

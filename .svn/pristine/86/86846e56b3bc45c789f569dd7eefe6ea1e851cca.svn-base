@@ -1,0 +1,92 @@
+@import '/components/css/tabbar.wxss';
+
+/* 页面容器 */
+.cantinas{
+  width: 100%;
+margin-bottom: 41px;
+}
+/* 大图片容器 */
+.cantinas-laimg{
+  width: 100%;
+}
+/* 图片属性 */
+.cantinas-laimg>image{
+  width: 750rpx;
+  height: 450rpx;
+}
+/* 标题详情容器 */
+.cantinas-details{
+  width: 100%;
+  height: 300rpx;
+  color: #888;
+  font-size: 28rpx;
+  margin-bottom: 15rpx;
+  display: flex;
+  padding: 0 15rpx;
+}
+/* 标题 */
+.cantinas-title{
+  width: 70%;
+  font-size: 36rpx;
+  color: #000;
+  font-weight: 00;
+  margin: 20rpx 0 ;
+}
+/* 标题下的小标签 */
+.cantinas-paks{
+
+  border-radius: 30px;
+  margin: 10rpx 10rpx;
+  padding: 5rpx 25rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  background:rgba(222, 222, 222,0.5);
+  color: #999;
+}
+.cantinas-icon{
+  margin: 40rpx;
+  position: relative;
+}
+/* 访问量icon图标 */
+.cantinas-icon>image{
+  width: 100rpx;
+  height:100rpx;
+}
+/* 数字访问量 */
+.cantinas-icon>view{
+  text-align: center;
+  color: #DF0813;
+  position: absolute;
+  top: 80rpx;
+  right: 35rpx;
+}
+/* 内容容器 */
+.cantinas-neiron{
+  border-top: 10rpx solid rgba(222, 222, 222,0.5);
+  padding-top: 18rpx;
+  text-align: center;
+  border-bottom: 1rpx solid rgba(222, 222, 222,0.9);
+  color: #44f;
+  padding: 0 15rpx;
+}
+/* 内容 */
+.cantinas-neiron>view{
+  display: inline-block;
+  padding-bottom: 15rpx;
+border-bottom: 7rpx solid  #44f;
+}
+/* 内容内的文字容器 */
+.cantinas-xwna{
+  margin-top: 30rpx;
+  color: #666;
+  font-weight: 520;
+  padding: 0 15rpx;
+}
+.cantinas-xnna{
+  margin-top: 30rpx;
+}
+/* 结尾图片 */
+.cantinas-lowimg>image{
+  margin-top: 50rpx;
+  width: 750rpx;
+}

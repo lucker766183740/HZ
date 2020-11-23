@@ -1,0 +1,27 @@
+@import '/components/css/icon.wxss';
+.headline{
+  position:relative;
+  display:flex;
+  align-items: center;
+  margin-bottom:20rpx;
+  padding:10rpx 0 12rpx 20rpx;
+  font-weight: bold;
+}
+.headline-border{
+  float:left;
+  width:24rpx;
+  height:24rpx;
+  margin-right:8rpx;
+  /* background-color:#3F89E8; */
+}
+.headline-title{
+  float:left;
+}
+.headline-all{
+  position:absolute;
+  top:10rpx;
+  right:30rpx;
+  font-weight: 400;
+  font-size: 28rpx;
+  color:#aaa;
+}

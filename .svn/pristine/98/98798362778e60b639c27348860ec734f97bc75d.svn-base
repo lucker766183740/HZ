@@ -1,0 +1,35 @@
+<!---------- 标题 ---------->
+<block wx:if="{{news.headlineShow}}" >
+  <headline headline="{{news.headline}}"></headline>
+</block>
+
+<view>其他信息</view>
+
+<!---------- 其他模块-图文 ---------->
+<block wx:if="{{_imageTextList.length}}">
+  <block wx:for="{{imageTextList}}" wx:key="index">
+    <view class="newimg">
+      <view class="newimg-image">
+        <image  src="{{news.mediaUrl}}"></image>
+      </view>
+    </view>  
+  </block>
+</block>
+
+<!---------- 其他模块-视频 ---------->
+<block wx:if="{{_mediaList.length}}">
+  <block wx:for="{{mediaList}}" wx:key="index">
+    <view class="news-video">
+      <video src="http://192.168.1.232:8080/renren-fast/smallapple/file/3/1598428762948/02_尚硅谷_Vue_基本使用.avi"></video>
+    </view>
+  </block>  
+</block>
+
+<!---------- 领导讲话 ---------->
+<block wx:if="{{news.speech}}">
+  <view class="news-speech">
+    <view class="news-speech-header">在银行新闻宣传与舆论引导专题培训班上的讲话</view>
+    <view class="news-speech-date">2020-08-07</view>
+    <view class="news-speech-detail">根据总行202*年培训计划，经总行行领导同意，今天，我们与人民大学培训学院合作，在这里举办新闻宣传...</view>
+  </view>
+</block>

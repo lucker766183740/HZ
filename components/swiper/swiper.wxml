@@ -1,0 +1,20 @@
+<swiper
+  class="swiper"
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  indicator-color="#707070"
+  indicator-active-color= "#348BF5" 
+  circular="true"
+  previous-margin="50rpx"
+  next-margin="50rpx"
+  bindchange="handleChange"
+  easing-function="easeInOutCubic"
+>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item class="swiper-item" bindtap="gotoSwiperItem" data-index="{{index}}">
+      <image src="{{item}}" class="swiper-image {{currentIndex == index ? 'active': ''}}"  />
+    </swiper-item>
+  </block>
+</swiper>

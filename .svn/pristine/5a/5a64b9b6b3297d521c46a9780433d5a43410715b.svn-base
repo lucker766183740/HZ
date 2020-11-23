@@ -1,0 +1,63 @@
+<headline
+  wx:if="{{manager.headlineShow}}"  
+  headline="{{manager.headline}}"
+></headline>
+<!-- 明星客户经理 -->
+<view wx:if="{{manager.type === 'star'}}" class="manager-star-box">
+  <block wx:for="{{manager.list}}" wx:key="index">
+    <view class="manager-star" bindtap="gotoNavigate" data-index="{{index}}">
+      <view class="manager-star-headerimg">
+        <image src="{{item.headerImg}}"></image>
+      </view>
+      <view class="manager-star-desc">
+        <view class="manager-star-name">{{item.name}}</view>
+        <view class="manager-star-job">{{item.job}}</view>
+        <view class="phone manager-star-phone">{{item.phone}}</view>
+        <view class="company manager-star-company">{{item.company}}</view>      
+      </view>
+    </view>
+  </block>
+</view>
+
+<!---------- 客户经理-双排 ---------->
+<block wx:if="{{manager.type === 'double-row'}}">
+  <view class="manager-double-container">
+    <block wx:for="{{manager.list}}" wx:key="index">
+      <view class="manager-double-item" bindtap="gotoNavigateCard" data-index="{{index}}">
+        <view class="double-item-img">
+          <!-- <image src="/images/home/manager-header.png"></image> -->
+          <image src="{{item.avatarUrl}}"></image>
+        </view>
+        <view class="double-item-right">
+          <view class="double-item-name">{{item.realName}}</view>
+          <view class="phone manager-star-phone">{{item.mobile}}</view>
+          <view class="company manager-star-company">{{item.orgName || ''}}</view>  
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+
+<!-- 客户经理-微名片 -->
+<block wx:if="{{manager.type === 'card'}}">
+  <view class="manager-card">
+    <view class="manager-card-headImg">
+      <!-- <image src="{{manager.photoStr ? manager.photoStr : '/images/home/manager-header.png'}}"></image> -->
+      <image src="{{manager.photoStr}}"></image>
+    </view>
+    <view class="manager-card-detail">
+      <view class="card-detail-name">{{ manager.name }}</view>
+      <!-- <view class="card-detail-job">客户经理</view> -->
+      <!-- <view class="card card-detail-number">{{ manager.managerId }}</view> -->
+      <view class="phone card-detail-phone" bindtap="calling">{{ manager.phone }}</view>
+      <view class="wechat card-detail-wechat" bindtap="wxCopy">{{ manager.wechat }}</view>
+      <view class="company card-detail-company">{{ manager.orgName }}</view>
+      <!-- <view class="card-detail-bankname">{{ manager.orgName }}</view> -->
+    </view>
+    <!-- <view class="manager-card-heart {{ state ? 'icon-heart-active' : 'icon-heart-normal'}}" bindtap="handleHeartActive"></view> -->
+    <view class="manager-card-like {{ state ? 'manager-card-like-select' : ''}}" bindtap="handleHeartActive">
+      <text wx:if="{{state}}">已关注</text> 
+      <text wx:else>+关注</text>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,23 @@
+<!---------- 1. 用户详情 ---------->
+<!-- <view class="person">
+  <view class="person-headImg">
+    <image src="{{personMsg.headerImg}}"></image>
+  </view>
+  <view class="person-desc">
+    <text>修改头像</text>
+  </view>
+</view> -->
+
+<!---------- 基本信息 ---------->
+<view class="content">
+  <cmp-basic-view basicView="{{basicView}}" bindchildrenrEditVal="referEditVal"/>
+</view>
+
+<!---------- 提交 ---------->
+<block wx:if="{{isButtonShow}}">
+  <view class="person-btn" bindtap="submitPersonel">修改资料</view>
+</block>
+
+
+<!---------- 退出 ---------->
+<view class="person-btn sign-out-btn" bindtap="handleSignOut">退出</view>

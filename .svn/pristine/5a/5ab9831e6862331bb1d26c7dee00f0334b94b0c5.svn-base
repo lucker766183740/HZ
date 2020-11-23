@@ -1,0 +1,29 @@
+<!-- <canvas canvas-id='share' style='width:746rpx;height:920rpx;border:1px solid #ccc;'></canvas>  -->
+
+<view class="manager-card-box" hidden="{{!canvasHidden}}" catchtap="handleCloseTips"> 
+  <view class="manager-card" catchtap="handleNothing"> 
+    <canvas canvas-id='share' class="manager-card-canvas" style='width:640rpx;height:920rpx;'></canvas> 
+
+    <!-- 头像 -->
+    <!-- <view class="manager-card-headImg">
+      <image src="{{manager.photoStr}}"></image>
+    </view> -->
+    <!-- 信息 -->
+    <!-- <view class="manager-card-detail">
+      <view class="card-detail-name">{{ manager.name }}</view>
+      <view class="card-detail-job">客户经理</view>
+      <view class="card card-detail-number">{{ manager.managerId }}</view>
+      <view class="phone card-detail-phone">{{ manager.phone }}</view>
+      <view class="wechat card-detail-wechat">{{ manager.wechat }}</view>
+      <view class="company card-detail-company">{{ manager.address }}</view>
+    </view> -->
+    <!-- 二维码 -->
+    <!-- <view class="manager-share">
+      <image src="{{_managerShareImg}}"></image>
+    </view> -->
+  </view>
+  <!-- 按钮 -->
+  <view class="manager-btn-box">
+    <view class="manager-btn btn-sure" catchtap="handerSaveShareToPhone"><image src="/images/icon/mood.png"></image>  保存</view>
+  </view>
+</view>

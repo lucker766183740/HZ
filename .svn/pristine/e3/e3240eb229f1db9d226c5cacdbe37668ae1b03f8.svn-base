@@ -1,0 +1,7 @@
+.tips{
+  padding-top:200rpx;
+  font-size:36rpx;
+  line-height:60rpx;
+  text-align: center;
+  color:#aaa;
+}

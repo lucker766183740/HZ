@@ -1,0 +1,8 @@
+<view wx:if="{{_list.length}}" class="news-speech-box">
+  <block wx:for="{{_list}}" wx:key="index"> 
+    <view class="news-speech-item" bindtap="gotoNewsDetail" data-index="{{index}}">
+      <view class="speech-item-tips tips-news">新闻</view>
+      <view class="speech-item-title">{{item.financialName}}</view>    
+    </view>
+  </block>
+</view>

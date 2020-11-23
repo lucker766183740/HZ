@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+} 
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 720rpx;
+  height: 88rpx;
+  margin-bottom:8rpx;
+  padding:15rpx;
+  background: #fff;
+}
+.title-item{
+  flex:1;
+  margin:0 2rpx;
+  border-bottom:2px solid #DF0712;
+  border-radius: 10rpx 10rpx 0 0;
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height:80rpx;
+  text-align: center;
+} 
+.title-sel {
+  background-color:#fff;
+  color: #DF0712;
+} 
+.title-sel-selected{
+  background-color:#DF0712;
+  color: #fff;
+}
+ 
+.swiper {
+  flex: 1;
+  width: 720rpx;
+  min-height:1060rpx;
+  overflow: scroll;
+  margin: 0 auto;
+}
+swiper-item::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

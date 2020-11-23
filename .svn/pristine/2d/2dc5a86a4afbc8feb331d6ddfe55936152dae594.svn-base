@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "个人资料",
+  "usingComponents": {
+    "cmp-basic-view":"/components/basciView/index"
+  }
+}

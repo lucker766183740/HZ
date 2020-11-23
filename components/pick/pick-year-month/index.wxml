@@ -1,0 +1,6 @@
+<picker mode="date" fields="month" value="{{date}}" start="2016-01-01" end="2050-12-31" bindchange="getDateTime">
+  <view class="selectDate">      
+    <view>{{year}}年</view>
+    <view>{{month}}月</view>
+  </view>
+</picker>

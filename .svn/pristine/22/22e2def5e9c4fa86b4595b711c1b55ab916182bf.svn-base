@@ -1,0 +1,36 @@
+
+  <!-- 产品推荐 -->
+<view>
+  <headline
+    wx:if="{{recommend.headlineShow}}" 
+    headline="{{recommend.headline}}" 
+    headlineAll="{{recommend.headlineAll}}" 
+    navigateUrl="{{recommend.navigateUrl}}"
+  ></headline>
+
+  <!-- 贷款项 -->
+  <navigator url="../../pages/home/details/details">
+    <view class="banganner">
+    <!-- 图片部分 -->
+      <view class="bankge">
+      <text>推 荐</text>
+        <image src="../../images/bank/manager-back.png"></image>
+      </view>
+    <!-- 详情部分 -->
+      <view class="bangnner-details">
+      <!-- 标题 -->
+      <view class="bankge-title">小微企业贴息贷款</view>
+        <view class="bankge2">
+          <!-- icon小图标 -->
+          <image src="../../images/icon/lock-cm.png"></image>
+          <!-- 访问量 -->
+          <view>26</view>
+        </view>
+        <!-- 副标题 -->
+        <view class="banke-lowtitle">铁西额度最高不超不超过300万元</view>
+        <!-- 类型 -->
+        <view class="bankge2-lowkuan">贷款额度</view>
+      </view>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,3 @@
+<!-- <block wx:for="{{bankList}}" wx:key="index"> -->
+  <cmp-bank bankOther="{{bankOtherStage}}"></cmp-bank>
+<!-- </block> -->

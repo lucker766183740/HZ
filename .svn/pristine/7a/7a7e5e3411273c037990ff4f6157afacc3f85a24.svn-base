@@ -1,0 +1,11 @@
+<view class="message">
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="msg-item" data-id="{{item.id}}" bindtap="gotoMsgDetail">
+      <view class="msg-item-img">
+        <image src="{{item.imgUrl}}"></image>
+      </view>
+      <view class="msg-item-name">{{item.name}}</view>
+      <view class="msg-item-date">{{item.date}}</view>
+    </view>
+  </block>
+</view>

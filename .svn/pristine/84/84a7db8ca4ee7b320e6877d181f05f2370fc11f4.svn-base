@@ -1,0 +1,41 @@
+.avatar{
+  width:180rpx;
+  height:180rpx;
+  margin:0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+}
+
+/********** 输入框 **********/
+.basic-section{
+  display:flex;
+  min-height:100rpx;
+  border-bottom:1px solid #eee;
+}
+.basic-input-title{
+  width:240rpx;
+  height:100rpx;
+  padding-left:50rpx;
+  font-size: 32rpx;
+  line-height: 100rpx;
+}
+.basic-input-desc{
+  flex:1;
+  height:70rpx;
+  padding-top:30rpx;
+  padding-right:50rpx;
+  text-align: right;
+  color:#777;
+}
+
+.login-btn {
+  margin: 70rpx 50rpx;
+  background-color: #3F89E8;
+  border-radius: 80rpx;
+  font-size: 35rpx;
+  color:#fff;
+}

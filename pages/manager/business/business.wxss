@@ -1,0 +1,22 @@
+page{
+  padding:20rpx 0;
+}
+.business{
+  width:690rpx;
+  margin:0 auto;
+  background-color:#fff;
+  border-radius: 20rpx;
+}
+.business-btn{
+  width:690rpx;
+  height:90rpx;
+  margin:0 auto;
+  margin-top: 30rpx;
+  background-color:#DF0812;
+  border-radius: 16rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color:#fff;
+}

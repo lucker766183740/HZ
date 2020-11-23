@@ -1,0 +1,5 @@
+<view class="btnsection">
+  <view class="btnsection-contart">联系我们</view>
+  <view class=""></view>
+  <view class="btnsection-handle" bindtap="gotoBusiness">我要办理</view>
+</view>

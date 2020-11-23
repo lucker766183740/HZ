@@ -1,0 +1,35 @@
+<!-- 客户经理 -->
+<cmp-manager manager="{{manager}}" state="{{state}}" bindchildrHeartFocus="triggerHeartFocus"/>
+
+<!-- 浏览-点赞 -->
+<cmp-fabulous fabulous="{{fabulous}}" count="{{count}}" fabulousAct="{{whetherLike}}" bindchildrenFabulous="triggerFabulous"/>
+
+<!---------- 轮播 ---------->
+<cmp-swiper imgUrls="{{imgUrls}}" />
+
+<!---------- 推荐产品 ---------->
+<cmp-recommend recommend="{{productRecommendList}}" />
+
+<!---------- 其他产品 ---------->
+<cmp-recommend recommend="{{productOtherList}}" />
+
+<!---------- 产品类目 ---------->
+<cmp-category />
+
+<!-- 微名片-分享页 -->
+<view hidden="{{isShareBoxHiden}}">
+  <cmp-share-manager  manager="{{manager}}" managerShareImg="{{managerShareImg}}" bindchildrenShareBoxHidden="triggerShareBoxHidden"/>
+</view>
+
+<!-- 办理按钮 -->
+<view class="btnsection">
+  <view class="btnsection-contart" bindtap='handerShareBoxShow'>
+    <image src="/images/icon/icon-down.png"></image>
+    保存名片
+  </view>
+  <view class="btnsection-handle">
+    <button open-type="share">
+      <image src="/images/icon/icon-share.png"></image>分享
+    </button> 
+  </view>
+</view>

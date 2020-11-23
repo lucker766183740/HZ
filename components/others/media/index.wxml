@@ -1,0 +1,5 @@
+<block wx:for="{{_videoList}}" wx:key="index">
+  <view class="other-video">
+    <video src="{{item.mediaPath}}"></video>
+  </view>
+</block>  

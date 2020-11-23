@@ -1,0 +1,109 @@
+<!-------------------- 店铺版面类型-默认 -------------------->
+<!-- 0.领导讲话 / 1.轮播-广告 / 2.产品类目 / 3.产品推荐 / 4.客户经理 -->
+<block wx:if="{{ templateType === 0 }}">
+  <!---------- 1.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" advertisingList="{{advertisingList}}"/>
+ 
+  <!---------- 2.产品类目 ---------->
+  <cmp-category optView="{{category}}" />
+
+  <!---------- 0.金融资讯 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+
+  <!---------- 3.产品推荐 ---------->
+  <!-- <cmp-recommend recommend="{{ware}}" /> -->
+  <cmp-recommend2 recommend="{{ware}}" />
+  <!---------- 4.客户经理 ---------->
+  <cmp-manager manager="{{manager}}"/>
+  <!---------- 4.内勤人员 ---------->
+  <cmp-office backOffice="{{backOffice}}"/>
+</block>
+
+<!-------------------- 店铺版面类型-1 -------------------->
+<!-- 0.领导讲话 / 1.轮播-广告 / 2.产品推荐 3.产品类目 4.客户经理 -->
+<block wx:if="{{ templateType === 1 }}">
+  <!---------- 1.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" />
+
+  <!---------- 2.产品推荐 ---------->
+  <cmp-recommend recommend="{{ware}}" />
+ 
+  <!---------- 3.产品类目 ---------->
+  <cmp-category optView="{{category}}" />
+
+  <!---------- 0.领导讲话 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+  
+  <!---------- 4.客户经理 ---------->
+  <cmp-manager manager="{{manager}}"/>
+
+   <!---------- 4.内勤人员 ---------->
+   <cmp-office backOffice="{{backOffice}}"/>
+</block>
+
+<!-------------------- 店铺版面类型-2 -------------------->
+<!-- 0.领导讲话 / 1.轮播-广告 / 2.客户经理 / 3.产品推荐 / 4.产品类目 -->
+<block wx:if="{{ templateType === 2 }}">
+  <!---------- 1.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" />
+
+  <!---------- 2.客户经理 ---------->
+  <cmp-manager manager="{{manager}}"/>
+
+  <!---------- 4.内勤人员 ---------->
+  <cmp-office backOffice="{{backOffice}}"/>
+
+  <!---------- 3.产品推荐 ---------->
+  <cmp-recommend recommend="{{ware}}" />
+ 
+  <!---------- 4.产品类目 ---------->
+  <cmp-category optView="{{category}}" />  
+
+  <!---------- 0.领导讲话 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+</block>
+
+<!-------------------- 店铺版面类型-3 -------------------->
+<!-- 0.领导讲话 / 1.产品推荐 / 2.轮播-广告 / 3.产品类目 4.客户经理 -->
+<block wx:if="{{ templateType === 3 }}">
+  <!---------- 1.产品推荐 ---------->
+  <cmp-recommend recommend="{{ware}}" />
+
+  <!---------- 2.轮播-广告 ---------->
+  <cmp-swiper imgUrls="{{imgUrls}}" />
+
+  <!---------- 3.产品类目 ---------->
+  <cmp-category optView="{{category}}" />  
+
+  <!---------- 0.领导讲话 ---------->
+  <cmp-others-speech list="{{InforMationList}}"/>
+
+  <!---------- 4.客户经理 ---------->
+  <cmp-manager manager="{{manager}}"/> 
+
+  <!---------- 4.内勤人员 ---------->
+  <cmp-office backOffice="{{backOffice}}"/>
+</block>
+
+
+<!-- 分享页 -->
+<view hidden="{{isShareBoxHiden}}">
+  <cmp-share-bank shareData="{{shareData}}" shareImg="{{shareImg}}" bindchildrenShareBoxHidden="triggerShareBoxHidden"/>
+</view>
+<!-- 办理按钮 -->
+<view class="btnsection">
+  <view class="btnsection-contart" bindtap='handerShareBoxShow'>
+    <image src="/images/icon/icon-down.png"></image>
+    保存名片
+  </view>
+  <view class="btnsection-handle">
+    <button open-type="share">
+      <image src="/images/icon/icon-share.png"></image>分享
+    </button> 
+  </view>
+</view>
+
+ <!---------- 2.新闻模块 ---------->
+  <!-- <cmp-others imageTextList="{{imageTextList}}" videoList="{{videoList}}" /> -->
+  <!-- <cmp-others-imgText wx:if="{{imageTextSection.isShow}}" imageTextSection="{{imageTextSection}}" /> -->
+  <!-- <cmp-others-media wx:if="{{videoSection.isShow}}" videoList="{{videoSection.videoList}}"/> -->

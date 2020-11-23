@@ -1,0 +1,3 @@
+<view class="content">
+  <cmp-basic-view basicView="{{basicView}}"/>
+</view>

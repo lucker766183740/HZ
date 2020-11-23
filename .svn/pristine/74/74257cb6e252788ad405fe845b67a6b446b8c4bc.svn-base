@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "人员访问",
+  "usingComponents": {    
+    "cmp-pick-month":"/components/pick/pick-year-month/index",
+    "cmp-tabs":"/components/tabs/index"
+  }
+}

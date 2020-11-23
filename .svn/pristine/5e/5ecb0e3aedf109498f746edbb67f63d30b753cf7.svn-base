@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "微名片",
+  "usingComponents": { 
+    "cmp-swiper":"/components/swiper/swiper",
+    "cmp-recommend":"/components/recommend/index",
+    "cmp-recommend2":"/components/recommend2/index",
+    "cmp-manager":"/components/manager/index",
+    "cmp-fabulous":"/components/fabulous/index",
+    "cmp-category":"/components/category/index",
+    "cmp-share-manager":"/components/share/manager/index"
+  }
+}

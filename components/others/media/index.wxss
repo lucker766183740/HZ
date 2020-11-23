@@ -1,0 +1,12 @@
+.other-video{
+  width: 690rpx;
+  height: 390rpx;
+  margin: 10rpx auto;
+  border: 1px solid #323232;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+.other-video video{
+  width:100%;
+  height:100%;
+}

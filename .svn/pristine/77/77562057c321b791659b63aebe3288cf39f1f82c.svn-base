@@ -1,0 +1,177 @@
+import visit from '../../../utils/request'
+
+Page({
+  data: {
+    detail:{},
+    introduceList:[],
+    isShowIntroduce: true,
+    isShowTransaction: true, 
+    isShowTips: true,  
+  },
+  onLoad: function (options) {
+    let { wxProductId, orgId, managerId } = JSON.parse( options.params ) 
+    console.log( JSON.parse( options.params ) )
+    let isAuth = visit.isAuthFn()
+    if(isAuth){
+      this._getProductDetail( wxProductId )
+      this._saveCustomerHistory( wxProductId, orgId )
+      this.setData({
+        wxProductId: wxProductId,
+        managerId: managerId,
+        orgId: orgId
+      })
+    }else{
+      wx.reLaunch({
+        url: '/pages/home/auth/auth',
+      })
+    }
+  },
+  _getProductDetail( id ){
+    let url = visit.appUrl + '/app/getProById'
+    visit.request_n_post(url,{
+      wx_product_id: id
+    }, result => {
+      if( result.statusCode === 200 && result.data.code === 0 ){
+        let resData = result.data.data
+        this._filterProductItem( resData )
+        wx.setNavigationBarTitle({
+          title: resData.productName
+        })
+        this.setData({
+          detail: resData
+        })      
+      }
+    })
+  },
+  // 数据过滤
+  _filterProductItem( detail ){
+    let list = []  
+    let titleList = []  
+    let imageList = []
+    if( detail.productTypeId === 1 ){   // 理财
+      // list = [
+      //   { name: '产品名称', desc: detail.productName },
+      //   { name: '七日年化收益率', desc: detail.qiriAnnualized },
+      //   { name: '认购起点(元)', desc: detail.startAmount / 10000 + '万元' },
+      //   { name: '递增金额(元)', desc: '1.0' },
+      //   { name: '产品起息日', desc: detail.shelvesStartTime },
+      //   { name: '产品币种', desc: '人民币' }
+      // ]    
+      titleList = detail.productName.split(' ')
+      list = [
+        { name: '联系人', desc: detail.riskLev },
+        { name: '电    话', desc: detail.investmentHorizon },
+        { name: '地    址', desc: detail.riskWarn },
+      ]
+      detail.path.split(',').forEach( item => {
+        let imgItem = visit.appUrl + item
+        imageList.push( imgItem )
+      })
+    }else if( detail.productTypeId === 2 ){   // 存款
+      list = [
+        { name: '产品名称', desc: detail.productName },
+        { name: '产品介绍', desc: detail.productIntroduction },
+        { name: '起存金额(元)', desc: detail.minimumAmount / 10000 + '万元' },
+        { name: '存期', desc: '1.0' },
+        { name: '存款方式', desc: detail.depositWays },
+        { name: '产品币种', desc: '人民币' }
+      ]
+    }else if( detail.productTypeId === 3 ){   // 贷款
+      list = [
+        { name: '贷款用途', desc: detail.loanUse },
+        { name: '还款方式', desc: detail.repaymentMode },
+        { name: '担保方式', desc: detail.assureMeans },
+        { name: '客服电话', desc: detail.serviceTel },
+        { name: '产品币种', desc: '人民币' }
+      ]
+    }
+    this.setData({
+      titleList: titleList || [],
+      introduceList: list,
+      imageList: imageList
+    })
+  },
+  showIntroduce(){
+    let isShowIntroduce = this.data.isShowIntroduce
+    isShowIntroduce = !isShowIntroduce
+    this.setData({
+      isShowIntroduce: isShowIntroduce
+    })
+  },
+  showTransaction(){
+    let isShowTransaction = this.data.isShowTransaction
+    isShowTransaction = !isShowTransaction
+    this.setData({
+      isShowTransaction: isShowTransaction
+    })
+  },
+  showTips(){
+    let isShowTips = this.data.isShowTips
+    isShowTips = !isShowTips
+    this.setData({
+      isShowTips: isShowTips
+    })
+  },
+
+  gotoBusiness(){
+    let { wxProductId, managerId, orgId } = this.data
+    let params = {
+      wxProductId: wxProductId,
+      managerId: managerId,
+      orgId: orgId
+    }
+    wx.navigateTo({
+      url: '../business/business?params=' + JSON.stringify( params ),
+    })
+  },
+  // 保存客户访问记录
+  _saveCustomerHistory( wxProductId, orgId ){
+    let url = visit.appUrl + '/app/saveCustomerViewHistory'
+    let { userId } = wx.getStorageSync('userInfo')
+    visit.request_post_jsonString(url, {
+      projectId: wxProductId,  // 产品ID
+      projectType: 0,  // 产品-0, 微名片-1
+      customerId: userId,  //客户id
+      orgId: orgId, // 组织ID
+    }, res => {
+      console.log( res )
+    })
+  },
+
+  // 联系我们
+  handMessage(){
+    let { managerId, wxProductId, orgId } = this.data
+    let { productName, path } = this.data.detail
+    let imgSrc = visit.appUrl + path.split(',')[0]
+    console.log( imgSrc )
+    let detail = {
+      orgId: orgId,
+      managerId: managerId,
+      wxProductId: wxProductId,
+      productName: productName,
+      imgSrc: imgSrc
+    }
+    wx.navigateTo({
+      url: '/pages/message/messageDetail/messageDetail?detail=' + JSON.stringify(detail),
+    })
+  },
+
+  onShareAppMessage(res){
+    let { wxProductId, productName, createUserId } = this.data.detail
+    let url = visit.appUrl + '/app/wxforwardinginfo/save'
+    let pathAndData = '/pages/manager/productDetail/productDetail?detail=' + this.data.detail
+    visit.request_n_post(url,{
+      formId: wxProductId,
+      type: 1,
+      createby: createUserId,
+      tabType: 1
+    },(result)=>{
+      console.log( result )
+    })
+    // 返回数据
+    return {
+      title: productName,
+      path: pathAndData
+    }
+  }
+})

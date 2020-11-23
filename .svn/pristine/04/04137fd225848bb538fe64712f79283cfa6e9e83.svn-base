@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "办理业务",
+  "usingComponents": { 
+    "cmp-basic-view":"/components/basciView/index"
+  }
+}

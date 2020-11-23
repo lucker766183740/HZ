@@ -1,0 +1,90 @@
+@import '/components/css/icon.wxss';
+
+.person{
+  position:relative;
+  display:flex;
+  height:200rpx;
+  padding-top:10rpx;
+  padding-left:30rpx;
+  margin-bottom:16rpx;
+  box-shadow: 0 3rpx 8rpx #ccc;
+  color:#fff;
+}
+.person-headImg{
+  width:128rpx;
+  height:128rpx;
+  margin:25rpx 30rpx 0 30rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.person-headImg image{
+  width:100%;
+  height:100%;
+}
+.person-desc{
+  margin-top:30rpx;
+}
+.person-desc-name{
+  margin-bottom:20rpx;
+  font-size: 36rpx;
+  line-height:48rpx;
+}
+.person-desc-number{
+  font-size: 28rpx;
+  line-height:40rpx;
+}
+.person-desc-level{
+  font-size: 28rpx;
+  /* color:#aaa; */
+}
+
+.person-tips{
+  position:absolute;
+  top:60rpx;
+  right:16rpx;
+  padding-right:40rpx;
+  background-size:36rpx;
+  background-position: right center;
+  font-size: 32rpx;
+  line-height:60rpx;
+  /* color:#777; */
+}
+.person-tips-please{
+  /* color:red; */
+}
+
+/* 广告位 */
+.person-advert{
+  width:690rpx;
+  height:180rpx;
+  margin:0 auto;
+  margin-bottom:40rpx;
+}
+.person-advert image{
+  width:100%;
+  height:100%;
+}
+
+.person-view{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:98rpx;
+  margin-bottom:20rpx;
+  padding:0 40rpx;
+  background-color:#fff;
+}
+.person-view-icon{
+  width:34rpx;
+  height:34rpx;
+  margin-right:30rpx;
+}
+.person-view-name{
+  flex:1;
+  font-size: 32rpx;
+  line-height:98rpx;
+}
+.person-view-arrow{
+  width:30rpx;
+  height:30rpx;
+}

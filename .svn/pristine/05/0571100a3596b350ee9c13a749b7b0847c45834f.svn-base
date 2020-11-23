@@ -1,0 +1,120 @@
+.recommend{
+  margin-bottom:20rpx;
+}
+.wares{
+  width:720rpx;
+  height:256rpx;
+  margin:0 auto;
+  margin-bottom:10rpx;
+  background-color:#fff;
+  /* border:1px solid #ccc; */
+  border-radius: 16rpx;
+  box-shadow: 0 5px 5px #eee;
+  overflow: hidden;
+}
+.wares-top{
+  width:630rpx;
+  height:90rpx;
+  margin:0 auto;
+  border-bottom:1px solid #e1e1e1;
+}
+.wares-top-title{
+  float:left;
+  max-width: 400rpx;
+  height: 90rpx;
+  /* margin-left:50rpx; */
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height:90rpx;
+  overflow: hidden;
+}
+.wares-top-sign{
+  float:right;
+  margin-top:24rpx;
+  /* margin-right:30rpx; */
+  padding:0 20rpx;
+  /* background-color:orange; */
+  border:1px solid #F6A83A;
+  border-radius: 8rpx;
+  font-weight: bold;
+  font-size: 24rpx;
+  line-height:42rpx;
+  color:#F6A83A;
+}
+.wares-top-right{
+  float:right;
+  margin-top:48rpx;
+  margin-right:50rpx;
+}
+.wares-rate{
+  font-weight: 400;
+  font-size: 44rpx;
+  line-height:60rpx;
+  font-family: ArialMT;
+  text-align: center;
+  color:#DF0813;
+}
+.wares-rate-dk{
+  font-weight: 400;
+  font-size: 30rpx;
+  line-height:30rpx;
+  font-family: ArialMT;
+  text-align: center;
+  color:#DF0813;
+}
+.wares-rate-tips{
+  font-weight: 400;
+  font-size: 28rpx;
+  line-height:60rpx;
+  text-align: center;
+  color:#bbb;
+}
+
+.wares-bottom{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:660rpx;
+  height:140rpx;
+  padding:0 30rpx;
+  /* background-color:#f8f5f5; */
+  font-weight: 550;
+  font-size: 28rpx;
+  /* line-height:72rpx; */
+  color:#aaa;
+}
+.wares-bottom-item{
+  flex:1;
+  height:120rpx; 
+  padding-top:20rpx; 
+}
+.ware-bottom-division{
+  width:1rpx;
+  height:48rpx;
+  margin-top:10rpx;
+  border-right: 1px solid #e1e1e1;
+}
+.wares-bottom-right{
+  flex:1;
+}
+.wares-bottom-date{
+  margin-left:50rpx;
+}
+.wares-bottom-rate{
+  margin-right:96rpx;
+}
+.wares-bottom-smallsize{
+  font-weight: 400;
+  font-size: 24rpx; 
+  line-height:24rpx;
+  color:#aaa; 
+}
+
+/* 提示 - 没有数据 */
+.recommend-tips{
+  margin-top:500rpx;
+  font-size: 40rpx;
+  line-height:60rpx;
+  text-align: center;
+  color:#bbb;
+}

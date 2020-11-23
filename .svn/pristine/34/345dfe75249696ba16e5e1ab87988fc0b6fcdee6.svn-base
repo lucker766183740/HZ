@@ -1,0 +1,3 @@
+<view class="container">
+  <cmp-recommend2  recommend="{{ware}}"/>
+</view>

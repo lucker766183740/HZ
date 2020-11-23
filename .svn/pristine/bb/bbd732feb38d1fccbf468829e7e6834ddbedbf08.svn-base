@@ -1,0 +1,201 @@
+@import '/components/css/icon.wxss';
+@import '/components/css/tabbar.wxss';
+
+page{
+  padding-bottom:100rpx;
+  /* background-color:#eee; */
+}
+/********** 公共样式 **********/
+.product-small-size{
+  font-weight: 400;
+  font-size: 28rpx;
+  line-height:60rpx;
+  text-align: center;
+}
+.product-big-size{
+  /* font-weight: bold; */
+  font-size: 48rpx;
+  line-height:60rpx;
+  text-align: center;
+}
+.product-title{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10rpx 0 10rpx 20rpx;
+  font-size: 36rpx;
+  line-height:70rpx;
+}
+.product-icon{
+  width:40rpx;
+  height:40rpx;
+  margin-right:30rpx;
+  transform:rotate(0deg);
+  transition: 0.3s;
+}
+.product-icon-show{
+  transform:rotate(90deg);
+}
+.product-content-show{
+  transition: 0.3s;
+}
+
+/* .product-title{
+  height:80rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+  line-height:80rpx;
+  text-align: center;
+} */
+
+/********** 七日年化收益率 **********/
+.product-ratecontent{
+  width:690rpx;
+  height:430rpx;
+  margin:0 auto;
+  margin-top:20rpx;
+  margin-bottom:8rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  color:#aaa;
+}
+.product-ratecontent-top{
+  width:630rpx;
+  height:150rpx;
+  margin:0 auto;
+  padding-top:30rpx;
+  border-bottom:1px solid #e1e1e1;
+}
+.product-big-size{
+  font-size: 44rpx;
+  color:#DF0813;
+}
+.product-ratecontent-bottom{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:20rpx;
+}
+.product-ratecontent-border{
+  width:1px;
+  height:40rpx;
+  background-color:#e1e1e1;
+}
+
+/********** 产品特点 **********/
+.product-trait{
+  margin-bottom:8rpx;
+  background-color:#fff;
+}
+.product-trait view{
+  padding-left:60rpx;
+  background-position: 22rpx 22rpx;
+  background-size:28rpx;
+  font-size: 32rpx;
+  line-height:66rpx;
+}
+.product-trait .product-title{
+  padding-left:20rpx;
+}
+
+/********** 产品简介 **********/
+.product-introduce{
+  width:690rpx;
+  margin:0 auto;
+  margin-top:20rpx;
+  margin-bottom: 8rpx;
+  background-color:#fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.product-introduce-item{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 28rpx;
+  line-height:78rpx;
+}
+.product-introduce-item:nth-last-of-type(1){
+  border:none;
+}
+.introduce-item-title{
+  width:206rpx;
+  padding-left:30rpx;
+  color:#bbb;
+}
+.introduce-item-desc{
+  flex:1;
+}
+.product-type-1 {
+  background-color:#f1f4f9;
+}
+.product-type-1 .product-introduce{
+  background-color:#f1f4f9;
+}
+.product-type-1 .product-introduce-item{
+  height:50rpx;
+  border: none;
+}
+
+
+/* .product-introduce-item2 */
+.product-introduce2{
+  padding:20rpx 0;
+}
+.product-introduce2 .introduce-item-title{
+  width:180rpx;
+  padding-left:40rpx;
+  font-weight: bold;
+  font-size: 28rpx;
+  text-align: center;
+  color: #323223;
+}
+.product-introduce2 .introduce-item-desc{
+  flex:1;
+  padding-left:20rpx;
+}
+
+/********** 交易规则 **********/
+.product-transaction{
+  margin-bottom:8rpx;
+  background-color:#fff;
+}
+.product-transaction-item{
+  display:flex;
+  justify-content: start;
+  margin-bottom:30rpx;
+  padding:0 20rpx;
+}
+.product-transaction-item:nth-last-of-type(1){
+  margin:0;
+}
+.transaction-item-title{
+  width:150rpx;
+  font-size: 32rpx;
+  line-height:60rpx;
+  color:#bbb;
+}
+.transaction-item-desc{
+  flex:1;
+  font-size: 28rpx;
+  line-height:50rpx;
+}
+
+/********** 风险提示 **********/
+.product-tips{
+  margin-bottom: 8rpx;
+  background-color: #fff;
+}
+.product-tips-desc{
+  padding:8rpx 28rpx;
+  font-size: 28rpx;
+  line-height:60rpx;
+}
+.product-tips-tips{
+  padding:0 28rpx;
+  font-size: 28rpx;
+  line-height:50rpx;
+}
+
+/********* 办理按钮 *********/

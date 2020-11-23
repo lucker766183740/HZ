@@ -1,0 +1,98 @@
+<!-------------------- 理财模块 -------------------->
+<block wx:if="{{detail.productTypeId === 1}}">
+  <!-- 标题 -->
+  <view class="product-finance-title">
+    <block wx:for="{{titleList}}" wx:key="index">
+      <view class="product-finance-title-item">{{item}}</view>
+    </block>
+  </view>
+  <!-- 内容 -->
+  <view class="product-fiance-content">
+    <view style="font-weight:bold;text-indent:0;">产品详情</view>
+    <view>{{detail.productInstructions}}</view>
+  </view>
+  <!-- 产品推荐人 -->
+  <view class="product-introduce product-introduce2 product-type-1">
+    <block wx:for="{{introduceList}}" wx:key="index">
+      <view class="product-introduce-item">
+        <view class="introduce-item-title">{{item.name}}</view>:
+        <view class="introduce-item-desc">{{item.desc}}</view>
+      </view>  
+    </block> 
+  </view>
+  <!-- 图片 -->
+  <view class="product-imagelist">
+    <block wx:for="{{imageList}}" wx:key="index">
+      <view class="product-imagelist-item">
+        <image src="{{item}}"></image>
+      </view>
+    </block>
+  </view>
+</block>
+
+<!-------------------- 存款模块 -------------------->
+<block wx:if="{{detail.productTypeId === 2}}">
+  <!---------- 产品简介 ---------->
+  <view class="product-introduce">
+    <!-- <view class="product-title">产品简介 </view> -->
+    <block wx:for="{{introduceList}}" wx:key="index">
+      <view class="product-introduce-item">
+        <view class="introduce-item-title">{{item.name}}</view>
+        <view class="introduce-item-desc">{{item.desc}}</view>
+      </view>  
+    </block> 
+  </view>
+</block>
+
+<!-------------------- 贷款模块 -------------------->
+<block wx:if="{{detail.productTypeId === 3}}">
+  <!---------- 年化利率 ---------->
+  <view class="product-ratecontent">
+    <view class="product-ratecontent-top">
+      <view class="product-big-size">{{detail.loanAmount}}</view>
+      <view class="product-small-size">贷款额度</view>
+    </view>
+    <view class="product-ratecontent-bottom">
+      <view>
+        <view class="product-big-size">{{detail.loanObject}}</view>
+        <view class="product-small-size">贷款对象</view>
+      </view>
+      <view class="product-ratecontent-border"></view>
+      <view>
+        <view class="product-big-size">{{detail.loanTimeLimit}}</view>
+        <view class="product-small-size">贷款期限</view>
+      </view>
+    </view>
+  </view>
+  <!---------- 产品简介 ---------->
+  <view class="product-introduce">
+    <block wx:for="{{introduceList}}" wx:key="index">
+      <view class="product-introduce-item">
+        <view class="introduce-item-title">{{item.name}}</view>
+        <view class="introduce-item-desc">{{item.desc}}</view>
+      </view>  
+    </block> 
+  </view>
+</block>
+
+<!---------- 办理按钮 ---------->
+<view class="btnsection">
+  <view class="btnsection-contart" bindtap="handMessage">
+    <image src="/images/icon/icon-call.png"></image> 
+    联系我们
+  </view>
+  <view class="btnsection-border"></view>
+  <view class="btnsection-share">
+    <button style="width:220rpx;" open-type="share">
+      <image src="/images/icon/icon-share.png"></image>分享
+    </button>
+  </view>
+  <view class="btnsection-handle" bindtap="gotoBusiness"><image src="/images/icon/icon-handle.png"></image> 我要办理</view>
+</view>
+
+<!---------- 分享按钮 ---------->
+<!-- <view class="btn-box">
+  <button class="share" style="width:80rpx;" open-type="share">
+    <image src="/images/icon/share.png"></image>
+  </button>  
+</view> -->

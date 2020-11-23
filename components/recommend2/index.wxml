@@ -1,0 +1,56 @@
+
+  <!-- 产品推荐 -->
+<view>
+  <headline
+    wx:if="{{recommend.headlineShow}}" 
+    headline="{{recommend.headline}}" 
+    headlineAll="{{recommend.headlineAll}}" 
+    navigateUrl="{{recommend.navigateUrl}}"
+  ></headline>
+
+  <!-- 贷款项 -->
+
+    <view class="prodetails-lowpak">
+      <block wx:if="{{recommend.wareList.length}}">
+    <block wx:for="{{recommend.wareList}}" wx:key="index">
+    <view>
+    <view class="banganner" bindtap="gotoProductDetail" data-index="{{index}}">
+    <!-- 图片部分 -->
+      <view class="bankge">
+      <text>推 荐</text>
+        <image src="{{item.coverPath}}"></image>
+      </view>
+    <!-- 详情部分 -->
+      <view class="bangnner-details">
+      <!-- 标题 -->
+      <view class="bankge-title">{{item.productName}}</view>
+        <view class="bankge2">
+          <!-- icon小图标 -->
+          <image src="../../images/icon/lock-cm.png"></image>
+          <!-- 访问量 -->
+          <view>{{item.clickCount || '0'}}</view>
+        </view>
+
+        <block wx:if="{{item.productTypeId==1}}">
+        <!-- 副标题 -->
+        <view class="banke-lowtitle">联系人:{{item.riskLev || ''}},联系电话:{{item.investmentHorizon}}</view>
+        </block>
+
+        <block wx:if="{{item.productTypeId==2}}">
+           <!-- 副标题 -->
+        <view class="banke-lowtitle">起存金额:{{item.minimumAmount || ''}},存期:{{item.depositTerm}}</view>
+        </block>
+
+        <block wx:if="{{item.productTypeId==3}}">
+             <!-- 副标题 -->
+        <view class="banke-lowtitle">贷款额度:{{item.loanAmount || ''}},贷款期限:{{item.loanTimeLimit}}</view>
+        </block>
+        <!-- 类型 -->
+        <view class="bankge2-lowkuan">{{item.productKeyword}}</view>
+      </view>
+    </view>
+  </view>
+  </block>
+  </block>
+</view>
+</view>

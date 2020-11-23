@@ -1,0 +1,14 @@
+<block wx:for="{{list}}" wx:key="index">
+  <view class="information-item" bindtap="bindInformationItem" data-index="{{index}}">
+    <view class="information-item-left">
+      <view class="item-left-title">{{item.financialName}}</view>
+      <view class="item-left-date">{{item.startTime}}</view>
+    </view>
+    <block wx:if="{{item.imageUrl}}">
+      <view class="information-item-right">
+        <image src="{{item.imageUrl}}"></image>
+      </view>
+    </block>
+    
+  </view>
+</block>

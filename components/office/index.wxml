@@ -1,0 +1,23 @@
+<headline
+  wx:if="{{backOffice.headlineShow}}"  
+  headline="{{backOffice.headline}}"
+></headline>
+
+<!---------- 客户经理-双排 ---------->
+<block wx:if="{{backOffice.type === 'double-row'}}">
+  <view class="manager-double-container">
+    <block wx:for="{{backOffice.list}}" wx:key="index">
+      <view class="manager-double-item" bindtap="gotoNavigateCard" data-index="{{index}}">
+        <view class="double-item-img">
+          <!-- <image src="/images/home/manager-header.png"></image> -->
+          <image src="{{item.avatarUrl}}"></image>
+        </view>
+        <view class="double-item-right">
+          <view class="double-item-name">{{item.realName}}</view>
+          <view class="phone manager-star-phone">{{item.mobile}}</view>
+          <view class="company manager-star-company">{{item.orgName || ''}}</view>  
+        </view>
+      </view>
+    </block>
+  </view>
+</block>

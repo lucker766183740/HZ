@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "产品列表",
+  "usingComponents": {  
+    "cmp-recommend":"/components/recommend/index"
+  }
+}

@@ -1,0 +1,73 @@
+.category{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-bottom:30rpx;
+  padding:0 16rpx;
+  overflow: hidden;
+}
+/* 多个类目 */
+.category-item{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:350rpx;
+  height:180rpx;
+  margin-bottom:12rpx;
+  background-color:#fff;
+  /* border:1px solid #ccc; */
+  border-radius: 16rpx;
+  box-shadow: 2px 2px 2px #eee;
+}
+.category-item image{
+  width:58rpx;
+  height:56rpx;
+  margin-right:16rpx;
+}
+.category-item text{
+  font-weight: bold;
+}
+
+/* 三个类目 */
+.category-thirds{
+  flex:1;
+  flex-flow: column;
+  margin:0 10rpx;
+}
+.category-thirds image{
+  margin-right:0;
+  margin-bottom:8rpx;
+}
+
+
+.category-item1{
+  width:160rpx;
+  height:150rpx;
+  padding-top:30rpx;
+  border-radius: 32rxp;
+  text-align: center;
+  overflow: hidden;
+}
+.category-item1:active{
+  background-color:#eee;
+  border-radius: 32rxp;
+  overflow: hidden;
+}
+.category-item1 image{
+  display:block;
+  width:50rpx;
+  height:56rpx;
+  margin:0 auto;
+}
+.category-item1 text{
+  display:block;
+  font-weight: bold;
+  line-height:80rpx;
+}
+/* 单独 */
+.category-single{
+  width:710rpx;
+  margin:0 auto;
+  margin-top:-10rpx;
+  margin-bottom:12rpx;
+}

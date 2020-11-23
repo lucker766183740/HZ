@@ -1,0 +1,40 @@
+
+<headline wx:if="{{optView.headlineShow}}" headline="{{optView.headline}}"></headline>
+<view class="category">
+  <!-- 三个类目 -->
+  <block wx:if="{{ _optViewList.length % 3 === 0 }}">
+    <block wx:for="{{_optViewList}}" wx:key="index">
+      <view class="category-item category-thirds" bindtap="gotoNavigate" data-index="{{index}}">
+        <image src="{{imageList[index]}}"></image>
+        <text>{{item.productTypeName}}</text>
+      </view>  
+    </block>  
+  </block>
+  <!-- 多个类目 -->
+  <block wx:else>
+    <block wx:for="{{_optViewList}}" wx:key="index">
+      <view class="category-item" bindtap="gotoNavigate" data-index="{{index}}">
+        <image src="{{imageList[index]}}"></image>
+        <text>{{item.productTypeName}}</text>
+      </view>  
+    </block>  
+  </block>
+</view>
+
+<block wx:if="{{optViewSingle.isShow}}">
+  <view class="category-item category-single" bindtap="gotoNavigateSingle">
+    <block wx:if="{{optViewSingle.imageUrl}}">
+      <image src="{{optViewSingle.imageUrl}}"></image>
+    </block>
+    <text>{{optViewSingle.productTypeName}}</text>
+  </view> 
+</block>
+
+<!-- <view class="category">
+  <block wx:for="{{optView.optViewList}}" wx:key="index">
+    <view class="category-item1">
+      <image src="{{item.imageUrl}}"></image>
+      <text>{{item.productTypeName}}</text>
+    </view>  
+  </block>
+</view> -->

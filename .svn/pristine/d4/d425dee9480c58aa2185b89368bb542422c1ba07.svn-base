@@ -1,0 +1,68 @@
+<!---------- 1. 用户详情 ---------->
+<view class="person background-top" bindtap="gotoPersonal">
+  <view class="person-headImg">
+    <image src="{{personMsg.headerImg}}"></image>
+  </view>
+  <view class="person-desc">
+    <view class="person-desc-name">{{personMsg.name}}</view>
+    <view class="person-desc-number">{{personMsg.number}}</view>
+    <!-- <view class="person-desc-level">{{personMsg.level}}</view> -->
+  </view>
+  <view class="person-tips icon-arrow-right-white">
+    <view wx:if="{{personMsg.tips}}">查看信息</view>
+    <view wx:else class="person-tips-please">请完善信息</view>
+  </view>
+</view>
+
+<!---------- 2.广告位 ---------->
+<view class="person-advert" bindtap="gotoProductList">
+  <image src="/images/home/mine_banner.png"></image>
+</view>
+
+<!-------------------- 客户 -------------------->
+<block wx:if="{{personMsg.type !== 0}}">
+  <!---------- 3-1.我的产品 ---------->
+  <view class="person-view" bindtap="gotoMyRecordList">
+    <view class="person-view-icon icon-mine-product"></view>
+    <view class="person-view-name">我的产品</view>
+    <view class="person-view-arrow icon-arrow-right-grey"></view>
+  </view>
+  <!---------- 3-2.历史记录 ---------->
+  <view class="person-view" bindtap="gotoHistoryRecordList">
+    <view class="person-view-icon icon-mine-history"></view>
+    <view class="person-view-name">历史记录</view>
+    <view class="person-view-arrow icon-arrow-right-grey"></view>
+  </view>
+  <!---------- 3-3.我关注的客户经理 ---------->
+  <view class="person-view" bindtap="gotoCareForManager">
+    <view class="person-view-icon icon-mine-follow"></view>
+    <view class="person-view-name">我关注的客户经理</view>
+    <view class="person-view-arrow icon-arrow-right-grey"></view>
+  </view>
+  <!---------- 4.产品推荐 ---------->
+  <cmp-recommend recommend="{{ware}}"></cmp-recommend>
+  <!---------- 5.广告 ---------->
+  <!-- <cmp-recommend recommend="{{recommend2}}"></cmp-recommend> -->
+</block>
+
+<!-------------------- 经理 -------------------->
+<block wx:else>
+  <!---------- 3-1.运动轨迹 ---------->
+  <view class="person-view" bindtap="gotoMap">
+    <view class="person-view-icon icon-mine-trail"></view>
+    <view class="person-view-name">运动轨迹</view>
+    <view class="person-view-arrow icon-arrow-right-grey"></view>
+  </view>
+  <!---------- 3-2.客户留资 ---------->
+  <view class="person-view" bindtap="gotoCustomer">
+    <view class="person-view-icon icon-mine-capital"></view>
+    <view class="person-view-name">客户留资</view>
+    <view class="person-view-arrow icon-arrow-right-grey"></view>
+  </view>
+  <!---------- 3-3.人员访问 ---------->
+  <view class="person-view" bindtap="gotoVisitList">
+    <view class="person-view-icon icon-mine-visit"></view>
+    <view class="person-view-name">人员访问</view>
+    <view class="person-view-arrow icon-arrow-right-grey"></view>
+  </view>
+</block>

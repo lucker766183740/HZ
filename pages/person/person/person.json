@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "cmp-category":"/components/category/index",    
+    "cmp-recommend":"/components/recommend/index",
+    "cmp-recommend2":"/components/recommend2/index",
+    "cmp-manager":"/components/manager/index"
+  }
+}

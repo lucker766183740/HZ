@@ -1,0 +1,28 @@
+<view class='ticket-container'>
+    <scroll-view 
+      scroll-y 
+      bindscrolltoupper="upper" 
+      bindscrolltolower="lower" 
+      bindscroll="scroll" 
+      scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}"
+    >
+      <!--Tab布局-->
+      <view class='title'>
+        <block wx:for="{{_tabsData}}" wx:key="index">      
+          <view class="title-item {{currentIndex == index ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='{{index}}'>
+            <text>{{item.title}}</text>
+          </view>
+        </block>
+      </view>
+ 
+      <!--内容布局-->
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}' circular>
+        <block  wx:for="{{_tabsData}}" wx:key="index">
+          <swiper-item class='swiper'>
+            <cmp-basic-view basicView="{{item.basicView}}"/>
+          </swiper-item>        
+        </block>
+      </swiper>
+    </scroll-view>
+</view>

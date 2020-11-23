@@ -1,0 +1,16 @@
+/********** 公共样式 **********/
+.section-space{
+  margin-bottom:10rpx;
+  padding:10rpx 0;
+}
+.prodetails-lowpak{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+ .prodetails-lowpak>view:nth-child(even){
+  margin-left: 17rpx;
+}
+.prodetails-lowpak>view:nth-child(odd){
+margin-left: 17rpx;
+}
