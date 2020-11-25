@@ -32,8 +32,12 @@ Page({
     }, 
     isShareBoxHiden: true,  // 微名片分享弹出框 
   },
-  onLoad: function (options) {
-    let { managerId, orgId } = options
+  onLoad: function (query) {
+     // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
+     const scene = decodeURIComponent(query.scene)
+    //let { managerId, orgId } = scene
+    let managerId = scene.split('&')[0].split(':')[1]
+    let orgId = scene.split('&')[1].split(':')[1]
     this._getAdvertisingList()
     this._addManagerToProductList( managerId )
     this._getManagerDetail( managerId )
@@ -66,12 +70,12 @@ Page({
     visit.request_n_get(url, {
     }, (result) => {
       
-      if(result.data ){
+      if( result.statusCode === 200 && result.data ){
         let resData = result.data
         console.log('--------------------------------------')
         console.log( resData )
         if( !resData.managerId ){
-          this._filterTokenTimeOut()
+         // this._filterTokenTimeOut()
         }
         let manager = {
           type: 'card',
@@ -269,9 +273,9 @@ Page({
   _getWxacodeunlimit(){
     let url = visit.appUrl + '/app/getShareInfo'
     let { managerId, orgId } = this.data
-    let scene = `managerId:${managerId}&orgId:${orgId}`
+    let scene = `managerId=${managerId}&orgId=${orgId}`
     visit.request_n_post( url, {
-      page: 'pages/manager/qcard/qcard',
+      page: 'pages/manager/card/card',
       scene: scene,
       width: 300,
       auto_color: false  
@@ -300,7 +304,7 @@ Page({
       projectId: businessCardId,
       projectType: 1
     },res => {
-      if(res.data.code === 0 ){
+      if( res.statusCode === 200 && res.data.code === 0 ){
         let state = res.data.data.length ? true : false
         this.setData({
           state: state

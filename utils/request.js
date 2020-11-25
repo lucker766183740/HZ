@@ -1,7 +1,7 @@
 // const appUrl = 'http://DESKTOP-TCC15SS:8282/renren-fast'  // 李鹏
 // const appUrl = 'http://localhost:8282/renren-fast'  // 王立
 // const appUrl = 'https://xcx.gmncsyyh.com:8282/renren-fast'
-const appUrl = 'https://xcx.bjhrsoft.com:8282/renren-fast'
+ const appUrl = 'https://xcx.bjhrsoft.com:8282/renren-fast'
 
 // POST请求无loding
 function request_n_post(url, data, cb) {

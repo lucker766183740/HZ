@@ -166,13 +166,6 @@
 					"id": -1,
 					"name": "pages/home/contact/contact",
 					"pathName": "pages/home/contact/contact",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/home/contact/contact",
-					"pathName": "pages/home/contact/contact",
 					"scene": null
 				}
 			]

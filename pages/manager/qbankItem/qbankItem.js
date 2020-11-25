@@ -40,8 +40,14 @@ Page({
     shareImg:'',
     isShareBoxHiden: true
   },
-  onLoad: function (options) {
-    let { orgId, orgName } = options
+  onLoad: function (query) {
+      // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
+      console.log('2222222222222222222222222222')
+      console.log(query)
+    const scene = decodeURIComponent(query.scene)
+   // let { orgId } = scene
+    let orgId = scene.split(':')[1]
+    let orgName = ''
     this._getTemplateType( this.data.templateType )   // 版面类型
     this._getAdvertisingList()
     this._getInforMation()    // 领导讲话
@@ -161,7 +167,6 @@ Page({
           let { manager } = this.data
           manager.list = resData
           manager.headlineShow = true
-          manager.orgId = orgId
           this.setData({
             manager: manager
           })
@@ -171,7 +176,6 @@ Page({
           let { backOffice } = this.data
           backOffice.list = resNQ
           backOffice.headlineShow = true
-          backOffice.orgId = orgId
           this.setData({
             backOffice: backOffice
           })
@@ -185,10 +189,10 @@ Page({
   _getWxacodeunlimit(){
     let url = visit.appUrl + '/app/getShareInfo'
     let { orgId } = this.data
-    let scene = `orgId:${orgId}`
+    let scene = `orgId=${orgId}`
     // this._setShareData()
     visit.request_n_post( url, {
-      page: 'pages/manager/qbankItem/qbankItem',
+      page: 'pages/manager/bankItem/bankItem',
       scene: scene,
       width: 300,
       auto_color: false  
@@ -235,7 +239,6 @@ Page({
       depositTerm: ware.wareList.length && ware.wareList[0].depositTerm,
       loanAmount: ware.wareList.length && ware.wareList[0].loanAmount,
       loanTimeLimit: ware.wareList.length && ware.wareList[0].loanTimeLimit,
-      orgName : this.data.orgName
     }
     
     let shareData = {

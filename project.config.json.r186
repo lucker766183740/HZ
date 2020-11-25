@@ -1,0 +1,154 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.0",
+  "appid": "wx8a226baaea01916e",
+  "projectname": "mini-project",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "新闻资讯",
+          "pathName": "pages/information/information",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "消息",
+          "pathName": "pages/message/messageList/message",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "个人中心",
+          "pathName": "pages/person/person/person",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "个人中心-修改资料",
+          "pathName": "pages/person/personal/personal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "客户留资",
+          "pathName": "pages/manager/retainedList/retainedList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "人员访问",
+          "pathName": "pages/manager/visitList/visitList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "运动轨迹",
+          "pathName": "pages/manager/map/map",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登录",
+          "pathName": "pages/home/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "办理业务",
+          "pathName": "pages/manager/business/business",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 9,
+          "name": "微名片",
+          "pathName": "pages/manager/card/card",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "产品-详情",
+          "pathName": "pages/manager/productDetail/productDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "关注的客户经理",
+          "pathName": "pages/person/focusList/focusList",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

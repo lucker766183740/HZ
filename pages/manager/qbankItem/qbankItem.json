@@ -1,0 +1,15 @@
+{  
+  "navigationBarTitleText": "银行详情",
+  "usingComponents": { 
+    "cmp-swiper":"/components/swiper/swiper",
+    "cmp-news":"/components/others/imgText/index",
+    "cmp-category":"/components/category/index",
+    "cmp-recommend":"/components/recommend/index",
+    "cmp-recommend2":"/components/recommend2/index",
+    "cmp-manager":"/components/manager/index",
+    "cmp-office":"/components/office/index",
+    "cmp-others-speech":"/components/others/speech/index",
+    "cmp-share-bank":"/components/share/bank/index"
+    
+  }
+}
